@@ -20,7 +20,7 @@ const ClubPerformance = () => {
                 <div className="  sm:snap-center shrink-0  w-1/5 sm:w-[calc(15%)] md:w-[calc(20%)] lg:w-[calc(25%)] xl:w-[calc(31%)] "></div>
 
                 {club_events.map((e) => (
-                    <div className="snap-center shrink-0 min-w-[calc(24rem)] w-[calc(60vw)] max-w-lg  rounded-lg ">
+                    <div className="snap-center shrink-0 min-w-[calc(24rem)] w-[calc(60vw)] max-w-lg  rounded-lg " key={e.id}>
                         <div className="mb-6 lg:mb-0 max-w-xs text-gray-800 text-center mx-auto ">
                             <div className="bg-white  block rounded-lg shadow-lg">
                                 {/* <div className="bg-gradient-to-b from-[#FB5132] to-[#EA3F50]  block rounded-lg shadow-lg"> */}
