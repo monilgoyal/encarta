@@ -4,8 +4,8 @@ import React, { useEffect } from 'react'
 // import { AiFillEye } from 'react-icons/ai'
 // import { FiExternalLink, FiGithub } from 'react-icons/fi'
 // import { RiYoutubeLine } from 'react-icons/ri'
-import { non_tech_events } from '../../../data/events'
-import { ViewAllButton } from '../../helpers/button/viewall'
+import { non_tech_events } from '../../data/events'
+import { ViewAllButton } from '../helpers/button/viewall'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 const NonTechnicalEvents = () => {
@@ -44,9 +44,11 @@ const NonTechnicalEvents = () => {
         }
     }
     return (
-        <div className=' flex flex-col justify-center align-middle w-full py-10 lg:py-20'>
-            <div className='text-white  text-3xl md:text-4xl lg:text-5xl font-semibold mx-auto text-center'>
-                <h1>Non Tech Events</h1>
+        <div className=' flex flex-col justify-center align-middle w-full py-16 lg:py-20'>
+            <div className='text-white  text-2xl md:text-3xl lg:text-4xl font-semibold mx-auto text-center'>
+                {/* <h1>Non Tech Events</h1> */}
+                <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]'>Non Tech Events</h1>
+
                 {/* <h1 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]" >Events</h1> */}
             </div>
             <div className='relative w-full flex gap-x-6 lg:gap-x-12 snap-x overflow-x-auto  snap-mandatory no-scrollbar mt-[5vh] '>
@@ -62,7 +64,7 @@ const NonTechnicalEvents = () => {
                                             <h2 className="tracking-widest text-xs title-font font-medium text-[#fff] ">{e.time}</h2>
                                         </div>
                                         <h1 className="title-font sm:text-xl text-lg text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170] font-bold mb-1">{e.title}</h1>
-                                        <h6 className="title-font sm:text-xs text-xs font-medium text-white mb-2 ">{e.description}</h6>
+                                        <h6 className="title-font sm:text-xs text-xs font-medium text-white mb-2 ">{e.subtitle}</h6>
                                         <span className="leading-relaxed sm:text-base text-sm text-gray-400" dangerouslySetInnerHTML={{ __html: e.desc }} ></span>
                                     </div>
                                 </div>
@@ -96,8 +98,8 @@ const NonTechnicalEvents = () => {
                 <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6"></div>
 
             </div>
-            <Link href="/eects" passHref>
-                <div className="mt-[5vh] self-center">
+            <Link href="/events/#non-tech-event" passHref>
+                <div className="md:mt-[5vh] self-center absolute top-[75vh]">
                     <ViewAllButton />
                 </div>
             </Link>

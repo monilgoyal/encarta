@@ -1,133 +1,49 @@
-import { BsCircleFill } from 'react-icons/bs'
-import Image from 'next/image'
+
 import Footer from '../components/footer'
 import Header from '../components/header'
+import EventScrollar from '../components/helpers/Event_Scrollar'
 import Navbar from '../components/navbar'
-import { club_events } from '../data/events'
-import { useEffect } from 'react'
+import { tech_events, non_tech_events, club_events, workshop_events, speaker_session_events, Entrepreneurship_events } from '../data/events'
+
 // Certificates.sort((a, b) => (a.id < b.id) ? 1 : -1)
 
 function Certificate() {
-    useEffect(() => {
 
-
-        const RL_targets = document.querySelectorAll(".animation_RL");
-        const LR_targets = document.querySelectorAll(".animation_LR");
-
-        // Callback for IntersectionObserver
-        const callback_for_RL = function (entries) {
-            entries.forEach(entry => {
-
-                // Is the element in the viewport? 
-                if (entry.isIntersecting) {
-
-                    // Add the fadeIn class:
-                    entry.target.classList.add("motion-safe:animate-aosLtoR");
-                    // entry.target.classList.remove("motion-safe:animate-[aosRtoL_2s_reverse]");
-                } else {
-
-                    // Otherwise remove the fadein class
-                    entry.target.classList.remove("motion-safe:animate-aosLtoR");
-                    // entry.target.classList.add("motion-safe:animate-[aosRtoL_2s_reverse]");
-                }
-            });
-        };
-        const callback_for_LR = function (entries) {
-            entries.forEach(entry => {
-
-                // Is the element in the viewport? 
-                if (entry.isIntersecting) {
-
-                    // Add the fadeIn class:
-                    entry.target.classList.add("motion-safe:animate-aosRtoL");
-                    // entry.target.classList.remove("motion-safe:animate-[aosRtoL_2s_reverse]");
-                } else {
-
-                    // Otherwise remove the fadein class
-                    entry.target.classList.remove("motion-safe:animate-aosRtoL");
-                    // entry.target.classList.add("motion-safe:animate-[aosRtoL_2s_reverse]");
-                }
-            });
-        };
-
-        // Set up a new observer for Right to Left
-        const RL_observer = new IntersectionObserver(callback_for_RL);
-        // Set up a new observer for Left to Right
-        const LR_observer = new IntersectionObserver(callback_for_LR);
-
-        // Loop through each of the target RL
-        RL_targets.forEach(function (target) {
-            // Add the element to the watcher
-            RL_observer.observe(target);
-        });
-        // Loop through each of the target LR
-        LR_targets.forEach(function (target) {
-            // Add the element to the watcher
-            LR_observer.observe(target);
-        });
-
-
-    })
     return (
         <>
             <Header title="Encarta - Events" header_content="Certificates - Monil Goyal" />
             <Navbar />
-            <section className="text-gray-400 body-font py-20 lg:py-24">
-                <div className='dark:text-white text-indigo-500 text-3xl md:text-4xl lg:text-5xl font-semibold mx-auto text-center mb-12'>
-                    <h1>EVENTS</h1>
+            <section id="tech-event" className=" pt-20 lg:pt-24 ">
+                <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-12'>
+                    <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >TECH EVENTS</h1>
                 </div>
-                <div className="container px-5 mx-auto flex flex-wrap ">
-                    {club_events.map((e, index) => (
-                        index % 2 === 0 ? <div className="flex flex-col lg:flex-row relative w-full mx-auto overflow-x-hidden text-gray-900 dark:text-gray-400" key={e.id}>
-                            <div className="animation_LR w-full h-full flex justify-center lg:justify-end -translate-x-full">
-                                <div className={'w-full sm:w-3/4 '.concat(' ', e.fit != "fill" ? "py-10" : "")}>
-                                    <Image className='rounded-lg p-0 ' src={"https://images.weserv.nl/?url=" + e.url + "&w=600&h=400&dpr=2"} width="100%" height="100%" objectFit='contain' layout='responsive' alt='monil goyal'></Image>
-                                </div>
-                            </div>
-                            <div className="w-1/5 hidden h-full relative lg:flex items-center justify-center">
-                                <div className="h-full w-6 absolute left-[calc(50%-12px)] inset-0 flex items-center justify-center ">
-                                    <div className="h-full w-1 bg-indigo-100 dark:bg-gray-800 pointer-events-none"></div>
-                                </div>
-                                <div className="flex-shrink-0 w-10 h-10 rounded-full  inline-flex items-center justify-center text-white relative z-10">
-                                    <BsCircleFill className='text-indigo-500' />
-                                </div>
-                            </div>
-                            <div className="animation_RL w-full lg:w-full text-center lg:text-left flex flex-col justify-center translate-x-full ">
-                                <div className='w-full md:w-4/5 lg:w-3/5 self-center lg:self-start flex flex-col'>
-                                    <div className='text-xl font-semibold'>{e.title}</div>
-                                    <div className="py-[calc(2px)] my-2 rounded-xl bg-indigo-500 w-24 self-center lg:self-start"></div>
-                                    <div className='text-sm font-bold '>{ }</div>
-                                    <div className='text-sm font-bold ' dangerouslySetInnerHTML={{ __html: e.date }}></div>
-                                </div>
-                            </div>
-                        </div> : <div className="flex flex-col lg:flex-row-reverse relative w-full mx-auto overflow-x-hidden text-gray-900 dark:text-gray-400" key={e.id} >
-                            <div className="animation_RL w-full h-full flex justify-center lg:justify-start translate-x-full" >
-                                <div className={'w-full sm:w-3/4 '.concat(' ', e.fit != "fill" ? "py-10" : "")}>
-                                    <Image className='rounded-lg p-0' src={"https://images.weserv.nl/?url=" + e.url + "&w=600&h=400&dpr=2"} width="100%" height="100%" objectFit='contain' layout='responsive' alt='monil goyal'></Image>
-                                </div>
-                            </div>
-                            <div className="w-1/5 hidden h-full relative lg:flex items-center justify-center">
-                                <div className="h-full w-6 absolute left-[calc(50%-12px)] inset-0 flex items-center justify-center ">
-                                    <div className="h-full w-1 bg-indigo-100 dark:bg-gray-800 pointer-events-none"></div>
-                                </div>
-                                <div className="flex-shrink-0 w-10 h-10 rounded-full  inline-flex items-center justify-center text-white relative z-10">
-                                    <BsCircleFill className='text-indigo-500' />
-                                </div>
-                            </div>
-                            <div className="animation_LR w-full lg:w-full text-center lg:text-right flex flex-col justify-center -translate-x-full">
-                                <div className='w-full md:w-4/5 lg:w-3/5 self-center lg:self-end flex flex-col'>
-                                    <div className='text-xl font-semibold'>{e.title}</div>
-                                    <div className="py-[calc(2px)] my-2 rounded-xl bg-indigo-500 w-24 self-center lg:self-end"></div>
-                                    <div className='text-sm font-bold ' dangerouslySetInnerHTML={{ __html: e.date }}></div>
-                                </div>
-                            </div>
-                        </div>
-                    ))
-                    }
-
-
-                </div>
+                <EventScrollar event_catag={tech_events} />
             </section>
+            <section id="non-tech-event" className=" pt-20 lg:pt-24 ">
+                <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-12'>
+                    <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >NON TECH EVENTS</h1>
+                </div>
+                <EventScrollar event_catag={non_tech_events} />
+            </section>
+            <section id="workshop-event" className=" pt-20 lg:pt-24 ">
+                <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-12'>
+                    <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >WorkShops</h1>
+                </div>
+                <EventScrollar event_catag={workshop_events} />
+            </section>
+            <section id="speaker-event" className=" pt-20 lg:pt-24 ">
+                <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-12'>
+                    <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >Speaker Sessions</h1>
+                </div>
+                <EventScrollar event_catag={speaker_session_events} />
+            </section>
+            <section id="entrepreneurship-event" className=" pt-20 lg:pt-24 ">
+                <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-12'>
+                    <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >Entrepreneurship</h1>
+                </div>
+                <EventScrollar event_catag={Entrepreneurship_events} />
+            </section>
+            <div className="pt-20 lg:pt-24"></div>
             <Footer />
         </>
     )

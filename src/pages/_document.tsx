@@ -7,7 +7,7 @@ export default class CustomDocument extends Document {
                 <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet" />
 
             </Head>
-            <body >
+            <body className='bg-black' >
                 {/* <div style={{ background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/bg (6).png')", backgroundAttachment: 'fixed', backgroundPosition: "center", backgroundRepeat: "no-repeat" }}> */}
                 <div>
                     <div className="bg"></div>

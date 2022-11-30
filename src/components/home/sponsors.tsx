@@ -1,16 +1,17 @@
 import React from 'react'
 import Marquee from "react-fast-marquee";
-import { Sponsor } from '../../../data/sponsors'
+import { Sponsor } from '../../data/sponsors'
 import Image from 'next/image';
 
 const Sponsors = () => {
     return (
         <div className="flex flex-col justify-center align-middle w-full overflow-x-hidden absolute  py-20">
-            <div className='text-white  text-3xl md:text-4xl lg:text-5xl font-semibold mx-auto text-center self-center'>
-                SPONSORS
+            <div className='text-white  text-3xl md:text-4xl lg:text-5xl mx-auto text-center self-center'>
+                <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]'>SPONSORS</h1>
+
             </div>
             <Marquee
-                className='mt-[10vh]'
+                className='mt-[5vh]'
                 gradient={false}
                 speed={100}
                 pauseOnHover={true}

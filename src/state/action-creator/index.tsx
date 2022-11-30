@@ -1,7 +1,5 @@
-import { themeAction, drawerAction, contactFormAction } from "./actionType"
-export const themeToggle = () => ({
-    type: themeAction,
-})
+import { drawerAction, contactFormAction } from "./actionType"
+
 export const drawerToggle = () => ({
     type: drawerAction,
 })

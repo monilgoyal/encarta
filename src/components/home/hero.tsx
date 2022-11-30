@@ -24,19 +24,7 @@ function Hero() {
                         <h1 className='text-4xl md:text-8xl  text-white text-center tracking-[.4em] animate-text1_bt  mr-[-0.4em] mb-[-0.2em] font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170] ' >Encarta</h1>
                         <h2 className='text-sm md:text-2xl md:tracking-[1.2rem] tracking-[.3rem]  text-white text-center   font-extralight  animate-text2_bt mb-5  md:mb-0 font-[Eirian] ' >THE ANNUAL TECHNICAL FEST</h2>
                     </div>
-                    {/* <div className="mx-auto mt-4 animate-text3_bt">
 
-                        <span className='mx-auto lg:mx-0 w-min text-center'>
-                            <p className="w-max font-light relative whitespace-nowrap overflow-x-hidden leading-relaxed mx-auto lg:mx-0  before:bg-white dark:before:bg-gray-900 after:bg-gray-900 dark:after:bg-white pr-1 border-r-4 dark:border-white border-gray-700 border-solid text-xl xl:text-2xl animate-typeWriter">
-                                <span data-text-1="INSPIRATION" data-text-2="INNOVATION" data-text-3="INVENTION" className='font-extrabold text-white before:content-["Full Stack Developer"] before:animate-changeText  text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170] text-xl md:text-2xl  '></span>
-                            </p>
-                        </span>
-                    </div>
-                    <h2 className='text-xl md:text-2xl  text-white text-center   font-extralight mt-4 animate-text2_bt mb-5  md:mb-0' >23 Dec to 25 Dec 2k22</h2>
-                    <div className="animate-text3_bt">
-                        <h2 className='text-xl md:text-2xl  animate-pulse text-white text-center   font-extralight mt-4 animate-text2_bt mb-5  md:mb-0' >Registration Starting Soon...</h2>
-                    </div> */}
-                    {/* <p className='text-xl md:text-2xl  text-white text-center font-extralight mt-4 animate-text3_bt' >23 Dec to 25 Dec 2k22</p> */}
                 </div>
                 <div className='text-center absolute top-[60vh]' >
                     <button className="" onClick={scrolldown}>

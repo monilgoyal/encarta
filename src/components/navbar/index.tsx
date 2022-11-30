@@ -19,7 +19,7 @@ function Navbar() {
     const dispatch = useDispatch()
     const IsDrawerOpen = useSelector((state: RootState) => state.IsDrawerOpen)
     const toggleDrawer = bindActionCreators(actionCreator.drawerToggle, dispatch)
-    const toggleContactForm = bindActionCreators(actionCreator.contactFormToggle, dispatch)
+    // const toggleContactForm = bindActionCreators(actionCreator.contactFormToggle, dispatch)
     const routeLinkStyle = "mr-5 font-medium hover:text-[#fff] hover:opacity-100 text-xl hover:scale-110"
     return (
         <div className="relative bg-transparent">
@@ -34,18 +34,14 @@ function Navbar() {
                     </div>
 
                     <div className="-mr-2 -my-2 md:hidden">
-                        {/* <DrawerToggler /> */}
+                        <DrawerToggler />
                     </div>
-                    {/* <nav className="hidden md:flex space-x-10  ">
+                    <nav className="hidden md:flex space-x-10  ">
                         <Link href="/" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/" ? "text-[#FB5131] hover:text-[#FB5131] " : "text-gray-200   opacity-80")}>HOME</a></Link>
                         <Link href="/events" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/events" ? "text-[#FB5131] hover:text-[#FB5131]" : "text-gray-200 opacity-80")}>EVENTS</a></Link>
                         <Link href="/schedule" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/schedule" ? "text-[#FB5131] hover:text-[#FB5131]" : "text-gray-200 opacity-80")}>SCHEDULE</a></Link>
-                        <Link href="/certificates" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/certificates" ? "text-[#FB5131]" : "text-gray-200 opacity-80")}>ABOUT</a></Link>
-                    </nav> */}
-                    {/* <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0" >
-
-                        <span className="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-bold text-white bg-indigo-500 hover:bg-indigo-600" onClick={toggleContactForm} > Hire Me! </span>
-                    </div> */}
+                        <Link href="/about" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/certificates" ? "text-[#FB5131]" : "text-gray-200 opacity-80")}>ABOUT</a></Link>
+                    </nav>
                 </div>
             </div>
             {/* Mobile menu */}
@@ -79,13 +75,13 @@ function Navbar() {
                                 </Link>
 
 
-                                <Link href="/certificates" passHref>
+                                <Link href="/schedule" passHref>
                                     <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">
                                         <MdSchedule className='text-2xl' fill='url(#svg-gradient)' />
                                         <span className="ml-6 text-base font-medium "> Schedule </span>
                                     </a>
                                 </Link>
-                                <Link href="/sponsors" passHref>
+                                <Link href="/about" passHref>
                                     <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">
                                         <SiHandshake className='text-2xl' fill='url(#svg-gradient)' />
                                         <span className="ml-6 text-base font-medium "> About </span>

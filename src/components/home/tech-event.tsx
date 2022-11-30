@@ -4,8 +4,8 @@ import React, { useEffect } from 'react'
 // import { AiFillEye } from 'react-icons/ai'
 // import { FiExternalLink, FiGithub } from 'react-icons/fi'
 // import { RiYoutubeLine } from 'react-icons/ri'
-import { tech_events } from '../../../data/events'
-import { ViewAllButton } from '../../helpers/button/viewall'
+import { tech_events } from '../../data/events'
+import { ViewAllButton } from '../helpers/button/viewall'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 const TechnicalEvents = () => {
@@ -44,15 +44,14 @@ const TechnicalEvents = () => {
         }
     }
     return (
-        <div className=' flex flex-col justify-center align-middle w-full py-10 lg:py-20'>
-            <div className='text-white  text-3xl md:text-4xl lg:text-5xl font-semibold mx-auto text-center'>
+        <div className=' flex flex-col justify-center align-middle w-full py-16 lg:py-20'>
+            <div className='text-white  text-2xl md:text-3xl lg:text-4xl font-semibold mx-auto text-center'>
                 <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]'>Tech Events</h1>
-                {/* <h1 className="font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]" >Events</h1> */}
             </div>
             <div className='relative w-full flex gap-x-6 lg:gap-x-12 snap-x overflow-x-auto  snap-mandatory no-scrollbar mt-[5vh] '>
                 <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6"></div>
                 {tech_events.map((e) => (
-                    <div className="flex flex-wrap-reverse w-4/5 sm:w-2/5 lg:w-3/5 lg:py-0 py-4 px-1 bg-black relative snap-center shrink-0 first:pl-8 last:pr-8 rounded-xl" key={e.id}>
+                    <div className="flex flex-wrap-reverse w-4/5 sm:w-2/5 lg:w-3/5 lg:py-0 py-4 px-1 bg-black bg-opacity-40 relative snap-center shrink-0 first:pl-8 last:pr-8 rounded-xl" key={e.id}>
                         <div className="text-center relative z-10 w-full flex flex-wrap-reverse">
                             <div className="w-full lg:w-2/5  text-white ">
                                 <div className="relative  w-full h-3/4">
@@ -62,7 +61,7 @@ const TechnicalEvents = () => {
                                             <h2 className="tracking-widest text-xs title-font font-medium text-[#fff] ">{e.time}</h2>
                                         </div>
                                         <h1 className="title-font sm:text-xl text-lg text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170] font-bold mb-1">{e.title}</h1>
-                                        <h6 className="title-font sm:text-xs text-xs font-medium text-white mb-2 ">{e.description}</h6>
+                                        <h6 className="title-font sm:text-xs text-xs font-medium text-white mb-2 ">{e.desc}</h6>
                                         <span className="leading-relaxed sm:text-base text-sm text-gray-400" dangerouslySetInnerHTML={{ __html: e.desc }} ></span>
                                     </div>
                                 </div>
@@ -85,25 +84,31 @@ const TechnicalEvents = () => {
                                             <IoIosArrowForward className='text-3xl mx-auto text-white' />
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </div >
+                            </div >
                             <div className="w-full lg:w-3/5 text-white self-center lg:py-10 ">
                                 <Image className=' rounded-xl ' src={"https://images.weserv.nl/?url=" + e.thumbUrl + "&w=600&h=400&dpr=2"} width={600} height={400} objectFit="contain" layout='responsive' alt='monil goyal'></Image>
                             </div>
-                        </div>
-                    </div>
+                        </div >
+                    </div >
                 ))}
-                <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6"></div>
+                <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6" ></div>
 
-            </div>
-            <Link href="/eects" passHref>
-                <div className="mt-[5vh] self-center">
+            </div >
+            <Link href="/events" passHref>
+                <div className="absolute top-[75vh] lg:mt-[5vh] self-center">
                     <ViewAllButton />
                 </div>
             </Link>
-        </div>
+        </div >
 
     )
 }
 
 export default TechnicalEvents
+
+// FB5131
+
+// E93E53
+
+// E02170

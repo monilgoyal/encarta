@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { actionCreator } from '../../state'
 import { RootState } from '../../state/reducers'
-import ContactForm from '../helpers/forms/contact'
+import ContactForm from '../helpers/forms/event-1'
 function ContactDrawer() {
 
 
