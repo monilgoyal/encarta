@@ -95,7 +95,7 @@ function Navbar() {
                         </div>
                     </div>
                     <div className="  py-6 px-5 space-y-6">
-                        <Social />
+                        <Social extraClass='' fill='url(#svg-gradient)' />
                         {/* <div>
                             <span style={{ backgroundImage: 'linear-gradient(to right bottom, #fb5131, #f94143, #f43253, #eb2762, #e02170)' }} className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white" onClick={toggleContactForm}> Register </span>
                         </div> */}
