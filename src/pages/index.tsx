@@ -37,7 +37,7 @@ const Home: NextPage = () => {
             <h2 className='text-xl md:text-3xl md:tracking-[0.4rem] tracking-[.1rem]  text-white text-center   font-extralight  mb-5  md:mb-0 font-[Eirian] ' >Registration Starting Soon...</h2>
           </div>
 
-          <div className="absolute bottom-12 w-full">
+          <div className="absolute bottom-0 w-full">
             <Footer />
           </div>
         </div>

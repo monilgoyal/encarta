@@ -7,7 +7,7 @@ function Footer() {
     return (
         <footer className="text-white dark:text-gray-400 bg-transparent body-font ">
             <div className="border-t ">
-                <div className="container px-32 pt-2 pb-4 md:pt-4 flex flex-wrap mx-auto items-center justify-center">
+                <div className="container lg:px-32 pt-2 pb-4 md:pt-4 flex flex-col md:flex-row mx-auto items-center justify-center">
                     <div className="flex md:flex-nowrap flex-wrap justify-center items-end md:justify-start ">
                         <div className="relative sm:w-64 w-80 text-center md:text-left md:mt-0 mt-6">
                             <div className="flex-row  md:flex ">
@@ -24,17 +24,33 @@ function Footer() {
                                         DEPARTMENT OF <br />COMPUTER SCIENCE ENGINEERING
                                     </a>
                                     <a href="https://mbm.ac.in/" className='mx-auto font-medium tracking-widest'>
-                                        <br />MBM UNIVERSITY, JODHPUR
+                                        <br />MBM UNIVERSITY, JODHPUR RAJASTHAN 342011
                                     </a><br />
 
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <Social extraClass='mt-6 lg:mt-0 z-50 ' />
+
+                    <div className=' md:ml-auto  mt-6 md:mt-0 z-50 text-center md:text-left '>
+                        <Link href='/privacy_policy' passHref>
+                            <div className='cursor-pointer'>Privacy Policy</div>
+                        </Link>
+                        <Link href='/terms_and_condition' passHref>
+                            <div className='cursor-pointer'>Terms and Conditions</div>
+                        </Link>
+                        <Link href='/cancellation_policy' passHref>
+                            <div className='cursor-pointer'>Cancellation & Refund Policy</div>
+                        </Link>
+                    </div>
                 </div>
             </div>
-        </footer>
+            <div className="bg-black bg-opacity-40 ">
+                <div className=" mx-auto text-center px-5 ">
+                    <Social extraClass='mt-2' fill="#fff" />
+                </div>
+            </div>
+        </footer >
     )
 }
 
