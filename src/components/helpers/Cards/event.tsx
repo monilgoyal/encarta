@@ -68,7 +68,7 @@ function EventCard({ e }) {
                             }
                             {
                                 e.price == "Free" && e.rlink &&
-                                <div className="leading-relaxed sm:text-base text-sm text-gray-400 ">Register Link : <a href={e.rlink} target='_blank'>Click Here</a> </div>
+                                <div className="leading-relaxed sm:text-base text-sm text-gray-400 ">Register Link : <a href={e.rlink} target='_blank' rel="noopener">Click Here</a> </div>
                             }
                         </div>
                     </div>
