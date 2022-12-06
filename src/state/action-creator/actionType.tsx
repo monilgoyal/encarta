@@ -1,3 +1,5 @@
 // export const themeAction = "toggleTheme"
 export const drawerAction = "toggleDrawer"
 export const contactFormAction = "toggleContactForm"
+export const FETCH_EVENT_DATA = "fetch-event-data"
+export const CAPTURED_EVENT = "captured-event"

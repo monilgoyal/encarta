@@ -19,6 +19,7 @@ function Navbar() {
     const dispatch = useDispatch()
     const IsDrawerOpen = useSelector((state: RootState) => state.IsDrawerOpen)
     const toggleDrawer = bindActionCreators(actionCreator.drawerToggle, dispatch)
+
     // const toggleContactForm = bindActionCreators(actionCreator.contactFormToggle, dispatch)
     const routeLinkStyle = "mr-5 font-medium hover:text-[#fff] hover:opacity-100 text-xl hover:scale-110"
     return (
@@ -40,7 +41,7 @@ function Navbar() {
                         <Link href="/" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/" ? "text-[#FB5131] hover:text-[#FB5131] " : "text-gray-200   opacity-80")}>HOME</a></Link>
                         <Link href="/events" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/events" ? "text-[#FB5131] hover:text-[#FB5131]" : "text-gray-200 opacity-80")}>EVENTS</a></Link>
                         <Link href="/schedule" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/schedule" ? "text-[#FB5131] hover:text-[#FB5131]" : "text-gray-200 opacity-80")}>SCHEDULE</a></Link>
-                        <Link href="/about" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/certificates" ? "text-[#FB5131]" : "text-gray-200 opacity-80")}>ABOUT</a></Link>
+                        <Link href="/about" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/about" ? "text-[#FB5131]" : "text-gray-200 opacity-80")}>ABOUT</a></Link>
                     </nav>
                 </div>
             </div>
@@ -91,7 +92,8 @@ function Navbar() {
                         </div>
                     </div>
                     <div className="  py-6 px-5 space-y-6">
-                        <Social />
+                        <Social extraClass='' fill='url(#svg-gradient)' />
+
                         {/* <div>
                             <span style={{ backgroundImage: 'linear-gradient(to right bottom, #fb5131, #f94143, #f43253, #eb2762, #e02170)' }} className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white" onClick={toggleContactForm}> Register </span>
                         </div> */}

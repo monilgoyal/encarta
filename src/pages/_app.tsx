@@ -2,16 +2,21 @@ import '../styles/globals.css'
 import { Provider, useDispatch, useSelector } from 'react-redux';
 import type { AppProps } from 'next/app'
 import store from '../state/store';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import TopBarProgress from "react-topbar-progress-indicator"
 import { Router } from 'next/router';
-import ContactDrawer from '../components/drawer/contact';
+import ContactDrawer from '../components/drawer/side-drawer';
+import { bindActionCreators } from 'redux';
+import { actionCreator } from '../state';
+
+
 
 export const Site = ({ children }) => {
 
-
   const [progress, setProgress] = useState(false)
-
+  const dispatch = useDispatch()
+  const fetchEventData = bindActionCreators(actionCreator.getEvents, dispatch)
+  useEffect(() => { fetchEventData() }, [])
   Router.events.on("routeChangeStart", () => {
     setProgress(true)
     //function will fired when route change started

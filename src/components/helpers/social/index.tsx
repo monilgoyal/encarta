@@ -6,6 +6,7 @@ import { FiFacebook, FiMail } from 'react-icons/fi';
 import { FiYoutube } from 'react-icons/fi';
 type socialType = {
 	extraClass: string;
+	fill: string;
 }
 
 function Social(props: socialType) {
@@ -14,28 +15,28 @@ function Social(props: socialType) {
 			<span className='mx-2'>
 				<Link href="https://www.facebook.com/EncartaMBM?mibextid=ZbWKwL" >
 					<a target="_blank" aria-label='linkedin'>
-						<FiFacebook className='text-2xl' aria-hidden="true" stroke='url(#svg-gradient)' />
+						<FiFacebook className='text-2xl' aria-hidden="true" stroke={props.fill} />
 					</a>
 				</Link>
 			</span>
 			<span className='mr-2'>
 				<Link href="https://www.youtube.com/channel/UCWnoHVlyprKAwg-uMqWiQkg">
 					<a target="_blank" aria-label="github">
-						<FiYoutube className='text-[1.65rem]' aria-hidden="true" stroke='url(#svg-gradient)' />
+						<FiYoutube className='text-[1.65rem]' aria-hidden="true" stroke={props.fill} />
 					</a>
 				</Link>
 			</span>
 			<span className='mx-2'>
 				<Link href="https://www.instagram.com/encarta_mbm" >
 					<a target="_blank" aria-label='instagram'>
-						<FaInstagram className='text-2xl' aria-hidden="true" fill='url(#svg-gradient)' />
+						<FaInstagram className='text-2xl' aria-hidden="true" fill={props.fill} />
 					</a>
 				</Link>
 			</span>
 			<span className='mx-2'>
 				<Link href="mailto:encarta.mbm.23@gmail.com" >
 					<a target="_blank" aria-label='linkedin'>
-						<FiMail className='text-2xl' aria-hidden="true" stroke='url(#svg-gradient)' />
+						<FiMail className='text-2xl' aria-hidden="true" stroke={props.fill} />
 					</a>
 				</Link>
 			</span>

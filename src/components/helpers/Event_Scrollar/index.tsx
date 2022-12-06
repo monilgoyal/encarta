@@ -66,10 +66,10 @@ function EventScrollar({ event_catag }) {
     return (
         <div className="container px-5 mx-auto flex flex-wrap  ">
             {event_catag.map((e, index) => (
-                index % 2 === 0 ? <div className="flex flex-col lg:flex-row relative w-full mx-auto overflow-x-hidden text-white" key={e.id}>
-                    <div className="animation_LR w-full h-full flex justify-center lg:justify-end -translate-x-full">
-                        <div className={'w-full sm:w-3/4 '}>
-                            <Image className='rounded-lg p-0 ' src={"https://images.weserv.nl/?url=" + e.thumbUrl + "&w=600&h=400&dpr=2"} width="100%" height="100%" objectFit='contain' layout='responsive' alt='monil goyal'></Image>
+                index % 2 === 0 ? <div id={e.id} className="flex flex-col lg:flex-row relative w-full mx-auto overflow-hidden text-white no-scrollbar" key={e.id}>
+                    <div className="animation_LR w-full h-full flex justify-center lg:justify-end -translate-x-full pt-12 lg:py-0">
+                        <div className={'w-full sm:w-3/5 '}>
+                            <Image className='rounded-lg p-0 ' src={e.thumbUrl} width="100%" height="100%" objectFit='contain' layout='responsive' alt={e.title}></Image>
                         </div>
                     </div>
                     <div className="w-1/5 hidden h-full relative lg:flex items-center justify-center">
@@ -80,21 +80,22 @@ function EventScrollar({ event_catag }) {
                             <BsCircleFill fill='white' />
                         </div>
                     </div>
-                    <div className="animation_RL w-full lg:w-full text-center lg:text-left flex flex-col justify-center translate-x-full ">
+                    <div className="animation_RL w-full lg:w-full text-center lg:text-justify flex flex-col justify-center translate-x-full pt-12 lg:py-0">
                         <div className='w-full md:w-4/5 lg:w-3/5 self-center lg:self-start flex flex-col'>
-                            <div className='text-xl font-semibold'>{e.title}</div>
-                            <div className="py-[calc(2px)] my-2 rounded-xl bg-gradient-to-b from-[#E02170] via-[#E93E53] to-[#FB5131] w-24 self-center lg:self-start"></div>
-                            <div className='text-sm font-bold '>{ }</div>
-                            <div className='text-sm font-bold ' dangerouslySetInnerHTML={{ __html: e.date }}></div>
+                            <div className='text-xl font-semibold text-center'>{e.title}</div>
+                            <div className="py-[calc(2px)] lg:text-left my-2 rounded-xl bg-gradient-to-b from-[#E02170] via-[#E93E53] to-[#FB5131] w-24 self-center"></div>
+                            <div className='leading-relaxed  sm:text-lg text-sm'>{e.date}</div>
+                            <div className='leading-relaxed  sm:text-lg text-sm'>{e.time}</div>
+                            <div className='leading-relaxed sm:text-lg text-sm' dangerouslySetInnerHTML={{ __html: e.desc }} ></div>
                         </div>
                     </div>
-                </div> : <div className="flex flex-col lg:flex-row-reverse relative w-full mx-auto overflow-x-hidden text-gray-900 dark:text-gray-400" key={e.id} >
-                    <div className="animation_RL w-full h-full flex justify-center lg:justify-start translate-x-full" >
-                        <div className={'w-full sm:w-3/4'}>
-                            <Image className='rounded-lg p-0' src={"https://images.weserv.nl/?url=" + e.thumbUrl + "&w=600&h=400&dpr=2"} width="100%" height="100%" objectFit='contain' layout='responsive' alt='monil goyal'></Image>
+                </div> : <div id={e.id} className="flex flex-col lg:flex-row-reverse relative w-full mx-auto overflow-x-hidden text-gray-900 dark:text-gray-400 no-scrollbar" key={e.id} >
+                    <div className="animation_RL w-full h-full flex justify-center lg:justify-start translate-x-full pt-12 lg:py-0" >
+                        <div className={'w-full sm:w-3/5'}>
+                            <Image className='rounded-lg p-0' src={e.thumbUrl} width="100%" height="100%" objectFit='contain' layout='responsive' alt={e.title} ></Image>
                         </div>
                     </div>
-                    <div className="w-1/5 hidden h-full relative lg:flex items-center justify-center">
+                    <div className="w-1/5 hidden h-full relative lg:flex items-center justify-center ">
                         <div className="h-full w-6 absolute left-[calc(50%-12px)] inset-0 flex items-center justify-center ">
                             <div className="h-full w-[2px] bg-gradient-to-b from-[#E02170] via-[#E93E53] to-[#FB5131] pointer-events-none"></div>
                         </div>
@@ -102,11 +103,13 @@ function EventScrollar({ event_catag }) {
                             <BsCircleFill className='white' />
                         </div>
                     </div>
-                    <div className="animation_LR w-full lg:w-full text-center lg:text-right flex flex-col justify-center -translate-x-full">
+                    <div className="animation_LR w-full lg:w-full text-center lg:text-justify flex flex-col justify-center -translate-x-full  pt-12 lg:py-0">
                         <div className='w-full md:w-4/5 lg:w-3/5 self-center lg:self-end flex flex-col text-white'>
-                            <div className='text-xl font-semibold'>{e.title}</div>
-                            <div className="py-[calc(2px)] my-2 rounded-xl bg-gradient-to-b from-[#E02170] via-[#E93E53] to-[#FB5131]  w-24 self-center lg:self-end"></div>
-                            <div className='text-sm font-bold ' dangerouslySetInnerHTML={{ __html: e.date }}></div>
+                            <div className='text-xl font-semibold text-center'>{e.title}</div>
+                            <div className="py-[calc(2px)] lg:text-right my-2 rounded-xl bg-gradient-to-b from-[#E02170] via-[#E93E53] to-[#FB5131]  w-24 self-center "></div>
+                            <div className='leading-relaxed  sm:text-lg text-sm'>{e.date}</div>
+                            <div className='leading-relaxed  sm:text-lg text-sm'>{e.time}</div>
+                            <div className='leading-relaxed  sm:text-lg text-sm ' dangerouslySetInnerHTML={{ __html: e.desc }}></div>
                         </div>
                     </div>
                 </div>

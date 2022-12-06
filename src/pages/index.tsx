@@ -10,8 +10,12 @@ import ClubPerformance from '../components/home/clubs-performance'
 import Workshops from '../components/home/workshops'
 import SpeakerSession from '../components/home/speaker-session'
 import Entrepreneurshipeurship from '../components/home/entrepreneurship'
+import { useSelector } from 'react-redux'
+import { RootState } from '../state/reducers'
+import { useEffect } from 'react'
 // import './index.css'
 const Home: NextPage = () => {
+  const events = useSelector((state: RootState) => state.EventData)
   return (
     <>
       <Header />
@@ -29,15 +33,24 @@ const Home: NextPage = () => {
         <div className='relative h-screen snap-center min-h-[calc(750px)]'>
           <ClubPerformance />
         </div>
-        <div className='relative h-screen snap-center min-h-[calc(750px)]'>
-          <Workshops />
-        </div>
-        <div className='relative h-screen snap-center min-h-[calc(750px)]'>
-          <SpeakerSession />
-        </div>
-        <div className='relative h-screen snap-center min-h-[calc(750px)]'>
-          <Entrepreneurshipeurship />
-        </div>
+        {
+          events.Events.WORKSHOP &&
+          <div className='relative h-screen snap-center min-h-[calc(750px)]'>
+            <Workshops />
+          </div>
+        }
+        {
+          events.Events.SPEAKERS &&
+          <div className='relative h-screen snap-center min-h-[calc(750px)]'>
+            <SpeakerSession />
+          </div>
+        }
+        {
+          events.Events.ENTREPRENEURSHIP &&
+          <div className='relative h-screen snap-center min-h-[calc(750px)]'>
+            <Entrepreneurshipeurship />
+          </div>
+        }
         <div className='relative h-screen snap-center min-h-[calc(750px)]'>
           <Sponsors />
           {/* <div className='flex flex-col items-center  self-center align-middle justify-around h-[80vh]'>
@@ -45,7 +58,7 @@ const Home: NextPage = () => {
             <h2 className='text-xl md:text-3xl md:tracking-[0.4rem] tracking-[.1rem]  text-white text-center   font-extralight  mb-5  md:mb-0 font-[Eirian] ' >Registration Starting Soon...</h2>
           </div> */}
 
-          <div className="absolute bottom-12 w-full">
+          <div className="absolute bottom-0 w-full">
             <Footer />
           </div>
         </div>

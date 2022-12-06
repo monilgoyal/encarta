@@ -1,12 +1,12 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
-
+import Script from 'next/script'
 export default class CustomDocument extends Document {
     render() {
         return <Html>
             <Head>
                 <link href="https://fonts.googleapis.com/css2?family=Reggae+One&display=swap" rel="stylesheet" />
-
             </Head>
+            <Script src='https://checkout.razorpay.com/v1/payment-button.js' data-payment_button_id="pl_KoHj2fU4EhShCj" defer={true}></Script>
             <body className='bg-black' >
                 {/* <div style={{ background: "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/images/bg (6).png')", backgroundAttachment: 'fixed', backgroundPosition: "center", backgroundRepeat: "no-repeat" }}> */}
                 <div>

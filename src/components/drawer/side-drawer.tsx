@@ -4,11 +4,11 @@ import { useDispatch, useSelector } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { actionCreator } from '../../state'
 import { RootState } from '../../state/reducers'
-import ContactForm from '../helpers/forms/event-1'
-function ContactDrawer() {
-
-
+import TeamForm from '../helpers/forms/team'
+import Individual from '../helpers/forms/individual'
+function SideDrawer() {
     const IsContactFormOpen = useSelector((state: RootState) => state.IsContactFormOpen)
+    const CurrentEvent = useSelector((state: RootState) => state.CurrentEvent)
     const dispatch = useDispatch()
     const toggleContactForm = bindActionCreators(actionCreator.contactFormToggle, dispatch)
     return (
@@ -19,11 +19,15 @@ function ContactDrawer() {
                     <AiOutlineClose className=' text-xl fill-gray-900 dark:fill-white' aria-hidden="true" />
                 </button>
                 <div className="box-border p-10">
-                    <ContactForm />
+                    {
+                        CurrentEvent.type === "individual" ?
+                            <Individual formObject={CurrentEvent} /> :
+                            <TeamForm formObject={CurrentEvent} />
+                    }
                 </div>
             </div>
         </div>
 
     )
 }
-export default ContactDrawer
+export default SideDrawer

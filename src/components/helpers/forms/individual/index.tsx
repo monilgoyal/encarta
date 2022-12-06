@@ -30,75 +30,75 @@ function pushNotify(status, Title, Text) {
         position: 'right top'
     })
 }
-function ContactForm() {
-    const [isDragIn, setisDragIn] = useState(false)
+function Individual({ formObject }) {
+    // const [isDragIn, setisDragIn] = useState(false)
     const [errors, setErrors] = useState({})
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
-    const [linkedin, setLinkedin] = useState('')
-    const [message, setMessage] = useState('')
-    const [file, setFile] = useState<File>()
+    const [phone, setPhone] = useState('')
+    // const [message, setMessage] = useState('')
+    // const [file, setFile] = useState<File>()
     const [requested, setRequested] = useState(false)
     const [done, setDone] = useState(false)
     const [firstReq, setFirstReq] = useState(false)
 
 
-    useEffect(() => {
-        if (file != undefined) {
-            handleUpload()
-        }
-    }, [file])
+    // useEffect(() => {
+    //     if (file != undefined) {
+    //         handleUpload()
+    //     }
+    // }, [file])
 
-    const handlecapture = (event: React.FormEvent) => {
-        const files = (event.target as HTMLInputElement).files
-        if (files && files.length > 0) {
-            setFile(files[0])
-        }
-
-
-    }
-    const handleFileDelete = () => {
-        setFile(undefined)
-    }
-
-    const handleUpload = () => {
-        if (file) {
-            console.log(file)
-            let fileType = file.type;
-            // if (!fileType.match(/image\/*/) && !fileType.match(/application\/*/) && !fileType.match(/text\/*/)) {
-            if (!fileType.match(/image\/*/) && !fileType.match(/application\/*/) && !fileType.match(/text\/*/) && !fileType.match(/video\/*/)) {
-                pushNotify('error', 'Unsupported File', 'This file format is not allowed')
-                console.log(file)
-                // alert('Unsupported file format')
-                setFile(undefined)
-            }
-            if (file.size > 10600000) {
-                pushNotify('error', 'File size exceed 10Mb', 'For large files provide public link to access.')
-            }
-        }
-
-        setisDragIn(false)
-    }
-
-    const handleDragOver = (e: React.DragEvent) => {
-        e.stopPropagation();
-        e.preventDefault()
-        setisDragIn(true)
-    }
-    const handleDragLeave = (e: React.DragEvent) => {
-        e.stopPropagation();
-        e.preventDefault()
-        setisDragIn(false)
-    }
-    const handleDrop = (e: React.DragEvent) => {
-        e.stopPropagation();
-        e.preventDefault()
-
-        setisDragIn(true)
-        setFile(e.dataTransfer.files[0])
+    // const handlecapture = (event: React.FormEvent) => {
+    //     const files = (event.target as HTMLInputElement).files
+    //     if (files && files.length > 0) {
+    //         setFile(files[0])
+    //     }
 
 
-    }
+    // }
+    // const handleFileDelete = () => {
+    //     setFile(undefined)
+    // }
+
+    // const handleUpload = () => {
+    //     if (file) {
+    //         console.log(file)
+    //         let fileType = file.type;
+    //         // if (!fileType.match(/image\/*/) && !fileType.match(/application\/*/) && !fileType.match(/text\/*/)) {
+    //         if (!fileType.match(/image\/*/) && !fileType.match(/application\/*/) && !fileType.match(/text\/*/) && !fileType.match(/video\/*/)) {
+    //             pushNotify('error', 'Unsupported File', 'This file format is not allowed')
+    //             console.log(file)
+    //             // alert('Unsupported file format')
+    //             setFile(undefined)
+    //         }
+    //         if (file.size > 10600000) {
+    //             pushNotify('error', 'File size exceed 10Mb', 'For large files provide public link to access.')
+    //         }
+    //     }
+
+    //     setisDragIn(false)
+    // }
+
+    // const handleDragOver = (e: React.DragEvent) => {
+    //     e.stopPropagation();
+    //     e.preventDefault()
+    //     setisDragIn(true)
+    // }
+    // const handleDragLeave = (e: React.DragEvent) => {
+    //     e.stopPropagation();
+    //     e.preventDefault()
+    //     setisDragIn(false)
+    // }
+    // const handleDrop = (e: React.DragEvent) => {
+    //     e.stopPropagation();
+    //     e.preventDefault()
+
+    //     setisDragIn(true)
+    //     setFile(e.dataTransfer.files[0])
+
+
+    // }
 
     const validateEmail = (email) => {
         return email.match(
@@ -121,33 +121,37 @@ function ContactForm() {
             tempErrors["name"] = true;
             isValid = false;
         }
+        if (phone.length <= 10) {
+            tempErrors["invalidPhone"] = true;
+            isValid = false;
+        }
         if (!validateEmail(email)) {
             tempErrors["invalidEmail"] = true
             isValid = false;
         }
-
-        if (linkedin != '' && !validateLinkedinUrl(linkedin)) {
-            tempErrors["invalidLinkedinUrl"] = true
-            isValid = false;
-        }
-
         if (email.length <= 0) {
             tempErrors["email"] = true;
             isValid = false;
         }
-        if (message.length <= 24) {
-            tempErrors["message"] = true;
-            isValid = false;
-        }
+
+        // if (linkedin != '' && !validateLinkedinUrl(linkedin)) {
+        //     tempErrors["invalidLinkedinUrl"] = true
+        //     isValid = false;
+        // }
+
+        // if (message.length <= 24) {
+        //     tempErrors["message"] = true;
+        //     isValid = false;
+        // }
 
         setErrors({ ...tempErrors });
         return isValid;
     };
-    const handleErrorMessage = (e) => {
-        if (e.target.value.length > 24) {
-            setErrors({ ...errors, "message": false });
-        }
-    }
+    // const handleErrorMessage = (e) => {
+    //     if (e.target.value.length > 24) {
+    //         setErrors({ ...errors, "message": false });
+    //     }
+    // }
     const handleErrorName = (e) => {
         if (e.target.value.length > 0) {
             setErrors({ ...errors, "name": false });
@@ -157,13 +161,11 @@ function ContactForm() {
         if (e.target.value.length > 0) {
             setErrors({ ...errors, "email": false, "invalidEmail": false });
         }
-
     }
-    const handleErrorLinkedin = (e) => {
-        if (validateLinkedinUrl(e.target.value)) {
-            setErrors({ ...errors, "invalidLinkedinUrl": false });
+    const handleErrorPhone = (e) => {
+        if (e.target.value.length > 0) {
+            setErrors({ ...errors, "email": false, "invalidEmail": false });
         }
-
     }
     const cancelSource = useRef(null);
     const handleSubmit = (e) => {
@@ -175,97 +177,97 @@ function ContactForm() {
             setRequested(true)
         };
     }
-    useEffect(() => {
-        cancelSource.current = CancelToken.source();
-        if (requested) {
+    // useEffect(() => {
+    //     cancelSource.current = CancelToken.source();
+    //     if (requested) {
 
-            const reqBody = {
-                "Name": name,
-                "Email": email,
-                "LinkedIn": linkedin,
-                "Message": message,
-            }
-            if (file != undefined) {
-                reqBody["fileName"] = file.name
-                reqBody["fileType"] = file.type
-                reqBody["fileSize"] = file.size
-            }
-            axios.post(
-                process.env.NEXT_PUBLIC_FUNC_URL,
-                reqBody,
-                {
-                    cancelToken: cancelSource.current.token,
-                    headers: {
-                        'content-type': 'application/json',
-                        'secret': process.env.NEXT_PUBLIC_SECRET,
-                    },
-                }
-            ).then((resp) => {
-                setFirstReq(true)
-                if (file) {
-                    cancelSource.current = CancelToken.source()
-                    axios.put(
-                        resp.data.body.message, file, {
-                        cancelToken: cancelSource.current.token,
-                        headers: {
-                            'Content-Type': file.type
-                        }
-                    }).then(() => {
-                        setDone(true)
-                        pushNotify('success', 'Oh Yeah!', 'Request send successfully')
-                    }).catch(function (error) {
-                        if (error.response) {
-                            // console.log(error.response);
-                            pushNotify('error', 'Oh Sorry!', 'Failed to upload file. Please try again later')
-                        } else if (error.request) {
-                            // console.log(error.request);
-                            pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
-                        } else if (error.message == "canceled") {
+    //         const reqBody = {
+    //             "Name": name,
+    //             "Email": email,
+    //             "LinkedIn": linkedin,
+    //             "Message": message,
+    //         }
+    //         if (file != undefined) {
+    //             reqBody["fileName"] = file.name
+    //             reqBody["fileType"] = file.type
+    //             reqBody["fileSize"] = file.size
+    //         }
+    //         axios.post(
+    //             process.env.NEXT_PUBLIC_FUNC_URL,
+    //             reqBody,
+    //             {
+    //                 cancelToken: cancelSource.current.token,
+    //                 headers: {
+    //                     'content-type': 'application/json',
+    //                     'secret': process.env.NEXT_PUBLIC_SECRET,
+    //                 },
+    //             }
+    //         ).then((resp) => {
+    //             setFirstReq(true)
+    //             if (file) {
+    //                 cancelSource.current = CancelToken.source()
+    //                 axios.put(
+    //                     resp.data.body.message, file, {
+    //                     cancelToken: cancelSource.current.token,
+    //                     headers: {
+    //                         'Content-Type': file.type
+    //                     }
+    //                 }).then(() => {
+    //                     setDone(true)
+    //                     pushNotify('success', 'Oh Yeah!', 'Request send successfully')
+    //                 }).catch(function (error) {
+    //                     if (error.response) {
+    //                         // console.log(error.response);
+    //                         pushNotify('error', 'Oh Sorry!', 'Failed to upload file. Please try again later')
+    //                     } else if (error.request) {
+    //                         // console.log(error.request);
+    //                         pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
+    //                     } else if (error.message == "canceled") {
 
-                            // console.log('Error', error.message);
-                            pushNotify('warning', 'Canceled', 'We got your request but failed to upload file')
-                        } else {
-                            // console.log(error);
-                            pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
-                        }
-                        setRequested(false)
-                        setFirstReq(false)
-                        setDone(false)
-                    });
-                } else {
-                    setDone(true)
-                    pushNotify('success', 'Oh Yeah!', 'Request send successfully')
-                }
-            }).catch(function (error) {
-                setFirstReq(false)
-                if (error.response) {
-                    // console.log(error.response);
-                    if (error.response.status == 401)
-                        pushNotify('error', 'Unauthorized', 'Server is not able to identify you')
-                    else if (error.response.status == 400)
-                        pushNotify('error', 'Missing Data', 'Please provide required information')
-                    else
-                        pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
+    //                         // console.log('Error', error.message);
+    //                         pushNotify('warning', 'Canceled', 'We got your request but failed to upload file')
+    //                     } else {
+    //                         // console.log(error);
+    //                         pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
+    //                     }
+    //                     setRequested(false)
+    //                     setFirstReq(false)
+    //                     setDone(false)
+    //                 });
+    //             } else {
+    //                 setDone(true)
+    //                 pushNotify('success', 'Oh Yeah!', 'Request send successfully')
+    //             }
+    //         }).catch(function (error) {
+    //             setFirstReq(false)
+    //             if (error.response) {
+    //                 // console.log(error.response);
+    //                 if (error.response.status == 401)
+    //                     pushNotify('error', 'Unauthorized', 'Server is not able to identify you')
+    //                 else if (error.response.status == 400)
+    //                     pushNotify('error', 'Missing Data', 'Please provide required information')
+    //                 else
+    //                     pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
 
-                } else if (error.request) {
-                    // console.log(error.request);
-                    pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
-                } else if (error.message == "canceled") {
-                    // console.log('Error', error.message);
-                    pushNotify('error', 'Aborted', 'Request has been cancelled')
-                } else {
-                    // console.log('Error', error.message);
-                    pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
-                }
-                setRequested(false)
-                setFirstReq(false)
-                setDone(false)
-            });
-        }
-        return () => {
-            cancelSource.current.cancel();
-        }
-    }, [requested])
+    //             } else if (error.request) {
+    //                 // console.log(error.request);
+    //                 pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
+    //             } else if (error.message == "canceled") {
+    //                 // console.log('Error', error.message);
+    //                 pushNotify('error', 'Aborted', 'Request has been cancelled')
+    //             } else {
+    //                 // console.log('Error', error.message);
+    //                 pushNotify('error', 'Failed', 'Something went wrong. Please try again later')
+    //             }
+    //             setRequested(false)
+    //             setFirstReq(false)
+    //             setDone(false)
+    //         });
+    //     }
+    //     return () => {
+    //         cancelSource.current.cancel();
+    //     }
+    // }, [requested])
     const dispatch = useDispatch()
     const toggleContactForm = bindActionCreators(actionCreator.contactFormToggle, dispatch)
     return (
@@ -286,7 +288,7 @@ function ContactForm() {
                         <div className="inline text-red-600">*</div>
                     </div>
                     <div className='my-2'>
-                        <input type="text" className={'py-2 border-0 border-b w-full block outline-none border-solid text-sm h-14 bg-transparent dark:border-gray-500 dark:text-gray-200  focus:border-b-2'.concat(' ', errors['name'] ? 'border-red-600 ' : 'border-gray-300 focus:border-gray-400')} placeholder='John Doe'
+                        <input type="text" className={'py-2 border-0 border-b w-full block outline-none border-solid text-sm h-14 bg-transparent dark:border-gray-500 dark:text-gray-200  focus:border-b-2'.concat(' ', errors['name'] ? 'border-red-600 ' : 'border-gray-300 focus:border-gray-400')} placeholder='Enter your name'
                             value={name}
                             onChange={(e) => {
                                 setName(e.target.value);
@@ -300,11 +302,11 @@ function ContactForm() {
                 </div>
                 <div className='inline-block py-0 px-10 w-full'>
                     <div className='block text-md font-semibold mt-5 mb-3 dark:text-white'>
-                        Contact Email&nbsp;
+                        Email&nbsp;
                         <div className="inline text-red-600">*</div>
                     </div>
                     <div className='my-2'>
-                        <input type="text" className={'py-2 border-0 border-b w-full block outline-none border-solid text-sm h-14 bg-transparent dark:border-gray-500 dark:text-gray-200  focus:border-b-2'.concat(' ', errors['email'] || errors['invalidEmail'] ? 'border-red-600 ' : 'border-gray-300 focus:border-gray-400')} placeholder='example@domain.com'
+                        <input type="text" className={'py-2 border-0 border-b w-full block outline-none border-solid text-sm h-14 bg-transparent dark:border-gray-500 dark:text-gray-200  focus:border-b-2'.concat(' ', errors['email'] || errors['invalidEmail'] ? 'border-red-600 ' : 'border-gray-300 focus:border-gray-400')} placeholder='xyz@gmail.com'
                             value={email}
                             onChange={(e) => {
                                 setEmail(e.target.value);
@@ -316,7 +318,25 @@ function ContactForm() {
                         <p className='text-sm font-medium text-red-600 inline'>{errors['email'] ? 'This is required field' : errors['invalidEmail'] ? 'Invalid Email' : ''}</p>
                     </div>
                 </div>
-                <div className='inline-block py-0 px-10 mb-5 w-full'>
+                <div className='inline-block py-0 px-10 w-full'>
+                    <div className='block text-md font-semibold mt-5 mb-3 dark:text-white'>
+                        Phone&nbsp;
+                        <div className="inline text-red-600">*</div>
+                    </div>
+                    <div className='my-2'>
+                        <input type="text" className={'py-2 border-0 border-b w-full block outline-none border-solid text-sm h-14 bg-transparent dark:border-gray-500 dark:text-gray-200  focus:border-b-2'.concat(' ', errors['phone'] || errors['invalidPhone'] ? 'border-red-600 ' : 'border-gray-300 focus:border-gray-400')} placeholder='+91'
+                            value={phone}
+                            onChange={(e) => {
+                                setPhone(e.target.value);
+                            }}
+                            onKeyUp={(e) => handleErrorPhone(e)} />
+                    </div>
+                    <div className={errors['email'] || errors['invalidEmail'] ? 'visible' : 'hidden'}>
+                        <AiOutlineExclamationCircle className='text-red-600 text-xl inline' />&nbsp;
+                        <p className='text-sm font-medium text-red-600 inline'>{errors['email'] ? 'This is required field' : errors['invalidEmail'] ? 'Invalid Email' : ''}</p>
+                    </div>
+                </div>
+                {/* <div className='inline-block py-0 px-10 mb-5 w-full'>
                     <div className='block text-md font-semibold mt-5 mb-3 dark:text-white'>
                         Linkedin Profile
                     </div>
@@ -355,8 +375,8 @@ function ContactForm() {
                         <AiOutlineExclamationCircle className='text-red-600 text-xl inline' />&nbsp;
                         <p className='text-sm font-medium text-red-600 inline'>Enter atleast 25 characters</p>
                     </div>
-                </div>
-                <div className='inline-block py-0 px-10 mb-5 w-full'>
+                </div> */}
+                {/* <div className='inline-block py-0 px-10 mb-5 w-full'>
                     <div className='block text-md font-semibold mt-5 mb-3 dark:text-white'>
                         File
                     </div>
@@ -403,7 +423,7 @@ function ContactForm() {
                                 <MdDelete onClick={handleFileDelete} className="cursor-pointer" />
                             </span>
                         </div>}
-                </div>
+                </div> */}
                 <div className='mx-8'>
                     <button type='submit' className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-500 hover:bg-indigo-600"> Send </button>
                 </div>
@@ -417,7 +437,7 @@ function ContactForm() {
                     </svg>
                 </div>
                 <div className='mx-auto mt-5'>
-                    <p className={done ? "text-[#73AF55]" : "text-indigo-500"}>{done ? "Thanks! I will get in touch soon" : firstReq ? file ? "Uploading file" : "Thanks! I will get in touch soon" : "Sending"}</p>
+                    {/* <p className={done ? "text-[#73AF55]" : "text-indigo-500"}>{done ? "Thanks! I will get in touch soon" : firstReq ? file ? "Uploading file" : "Thanks! I will get in touch soon" : "Sending"}</p> */}
                 </div>
                 <div className='mx-auto mt-48'>
                     {done && <p className="success text-indigo-500 dark:text-white cursor-pointer" onClick={toggleContactForm}>CLOSE</p>}
@@ -426,4 +446,4 @@ function ContactForm() {
             </div>
     )
 }
-export default ContactForm
+export default Individual
