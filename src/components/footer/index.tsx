@@ -35,7 +35,7 @@ function Footer() {
                         </div>
                     </div>
 
-                    <div className=' lg:w-1/3  mt-6 lg:mt-0 z-50 text-center flex flex-col '>
+                    <div className=' lg:w-1/3  mt-2 lg:mt-0 z-50 text-center flex flex-col '>
                         <Link href='/privacy_policy' passHref>
                             <span className='cursor-pointer self-center'>Privacy Policy</span>
                         </Link>
@@ -49,7 +49,7 @@ function Footer() {
                             <span className='cursor-pointer self-center'>Shipping and Delivery</span>
                         </Link>
                     </div>
-                    <div className=' lg:w-1/3  mt-6 lg:mt-0 z-50 text-center lg:text-left flex flex-col '>
+                    <div className=' lg:w-1/3  mt-2 lg:mt-0 z-50 text-center lg:text-left flex flex-col '>
                         <div className="self-end flex-col flex">
 
                             <span className='cursor-pointer '>
@@ -72,7 +72,7 @@ function Footer() {
                     </div>
                 </div>
             </div>
-            <div className="bg-black bg-opacity-40 ">
+            <div className="bg-black bg-opacity-40 hidden lg:flex">
                 <div className=" mx-auto text-center px-5 ">
                     <Social extraClass='mt-2' fill="#fff" />
                 </div>
