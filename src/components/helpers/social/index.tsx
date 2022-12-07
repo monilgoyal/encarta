@@ -34,7 +34,7 @@ function Social(props: socialType) {
 				</Link>
 			</span>
 			<span className='mx-2'>
-				<Link href="mailto:encarta.mbm.23@gmail.com" >
+				<Link href="mailto:contact@encarta.tech" >
 					<a target="_blank" aria-label='linkedin'>
 						<FiMail className='text-2xl' aria-hidden="true" stroke={props.fill} />
 					</a>

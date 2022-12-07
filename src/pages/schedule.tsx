@@ -19,7 +19,7 @@ function Schedule() {
 
     return (
         <>
-            <Header title="Encarta - Schedule" header_content="About - Monil Goyal" />
+            <Header title="Encarta - Schedule" header_content="Encarta schedule" />
             <Navbar />
             <section className=" py-20 lg:py-24  min-h-[50vh] md:min-h-[70vh]">
                 {

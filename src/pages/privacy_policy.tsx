@@ -7,7 +7,7 @@ function Privacy_policy() {
 
     return (
         <>
-            <Header title="Encarta - Schedule" header_content="About - Monil Goyal" />
+            <Header title="Encarta - Privacy Policy" header_content="Encarta" />
             <Navbar />
             <section className=" py-20 lg:py-24  min-h-[50vh] md:min-h-[70vh] ">
 
@@ -16,7 +16,7 @@ function Privacy_policy() {
                 </div>
 
                 <section id='education' className="text-white body-font mx-auto  mb-4 py-4 px-5 md:px-15 lg:px-20 pt-10 lg:pt-12 text-lg lg:text-xl" >
-                    <div className='container mx-auto  leading-9 '>
+                    <div className='container mx-auto  leading-9 text-justify '>
                         <p>Please read this privacy policy carefully. By accessing or using The Encarta website, you
                             agree to be bound by the terms described herein and all the terms incorporated by reference.
                             If you do not adhere to all the below mentioned terms, do avoid using our website. Encarta (MBM-U) is committed to protect and respect your privacy. It has well defined

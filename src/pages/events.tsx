@@ -13,7 +13,7 @@ function Certificate() {
 
     return (
         <>
-            <Header title="Encarta - Events" header_content="Certificates - Monil Goyal" />
+            <Header title="Encarta - Events" header_content="Events in Encarta" />
             <Navbar />
             {
                 JSON.stringify(EventInitialState) != JSON.stringify(events) && <>

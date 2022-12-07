@@ -7,7 +7,7 @@ function Cancellation_Policy() {
 
     return (
         <>
-            <Header title="Encarta - Schedule" header_content="About - Monil Goyal" />
+            <Header title="Encarta - Cancellation Policy" header_content="Cancellation policy of Encarta" />
             <Navbar />
             <section className=" py-20 lg:py-24  min-h-[50vh] md:min-h-[70vh] ">
 

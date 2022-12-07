@@ -7,7 +7,7 @@ const Sponsors = () => {
     return (
         <div className="flex flex-col justify-center align-middle w-full overflow-x-hidden absolute py-20">
             <div className='text-white  text-3xl md:text-4xl lg:text-5xl mx-auto text-center self-center'>
-                <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]'>Gallary</h1>
+                <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]'>Gallery</h1>
             </div>
             <Marquee
                 className='h-[40vh] lg:h-[50vh]'

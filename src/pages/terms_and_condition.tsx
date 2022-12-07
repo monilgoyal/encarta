@@ -7,7 +7,7 @@ function Privacy_policy() {
 
     return (
         <>
-            <Header title="Encarta - Schedule" header_content="About - Monil Goyal" />
+            <Header title="Encarta - Schedule" header_content="Terms and conditions for Encarta" />
             <Navbar />
             <section className=" py-20 lg:py-24  min-h-[50vh] md:min-h-[70vh] ">
 
@@ -16,7 +16,7 @@ function Privacy_policy() {
                 </div>
 
                 <section id='education' className="text-white body-font mx-auto  mb-4 py-4 px-5 md:px-15 lg:px-20 pt-10 lg:pt-12 text-lg lg:text-xl" >
-                    <div className='container mx-auto  leading-9'>
+                    <div className='container mx-auto  leading-9 text-justify'>
                         <p>
                             Please read these terms of use carefully by accessing or using this internet-based platform, you agree to be bound by the terms described herein and all terms incorporated by reference. If you do not agree to all of these terms, do not use this internet-based platform.
                         </p>

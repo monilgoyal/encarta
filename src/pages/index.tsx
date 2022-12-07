@@ -12,7 +12,6 @@ import SpeakerSession from '../components/home/speaker-session'
 import Entrepreneurshipeurship from '../components/home/entrepreneurship'
 import { useSelector } from 'react-redux'
 import { RootState } from '../state/reducers'
-import { useEffect } from 'react'
 // import './index.css'
 const Home: NextPage = () => {
   const events = useSelector((state: RootState) => state.EventData)

@@ -7,7 +7,7 @@ function Shipping_and_Delivery_Policy() {
 
     return (
         <>
-            <Header title="Encarta - Schedule" header_content="About - Monil Goyal" />
+            <Header title="Encarta" header_content="Encarta" />
             <Navbar />
             <section className=" py-20 lg:py-24  min-h-[50vh] md:min-h-[70vh] ">
 
