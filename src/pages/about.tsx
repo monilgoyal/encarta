@@ -17,11 +17,8 @@ function About() {
             </div>
             <div className="container px-5 py-6 mx-auto flex flex-col text-white">
                 <div className="lg:w-4/6 mx-auto items-center text-center sm:text-justify justify-center">
-                    <p className="leading-relaxed text-lg mb-4 " >ENCARTA is Annual techfest of the Department of Computer Science and Engineering, MBM University, Jodhpur, is kicking off the 23rd iteration of its yearly festival, from 23rd to 25th December following its legacy since 1997.
-                        It incorporates both technical and non-technical events which includes Coding Relay, Robotics, Electronics, Workshops, Development events and much more. Encarta is all set to provide an
-                        enriching experience to their witnesses. It is organizing wide range of events in both
-                        technical and non-technical fields to broaden students&apos; knowledge in their chosen fields. It will prove to be a pivotal opportunity for
-                        the youngsters striving for excellence in their career domain.
+                    <p className="leading-relaxed text-lg mb-4 " >
+                        The Department of Computer Science and Engineering, MBM University, is elated to announce its 23rd annual techfest from December 23–25, following its legacy since 1997. It incorporates both technical and non-technical events, which include coding relay, robotics, electronics, workshops, development events, and much more. Encarta is all set to provide an enriching experience to their witnesses. A wide range of events will be organized in both technical and non-technical fields to broaden students' knowledge in their chosen fields. It will prove to be a pivotal opportunity for youngsters striving for excellence in their career domain.
                     </p>
                 </div>
             </div>
@@ -81,7 +78,7 @@ function About() {
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/299879726_1227725241360586_7954635754734882989_n_ylecrpzh.jpg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">ABHISHEK GOUR</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">ABHISEK GOUR</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
                                     <p className="text-base">ENCARTA FACULTY CO-ORDINATOR</p>
                                 </div>
