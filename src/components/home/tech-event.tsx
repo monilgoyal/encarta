@@ -19,12 +19,14 @@ const TechnicalEvents = () => {
                 ))}
                 <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6" ></div>
 
-            </div >
-            <Link href="/events" passHref>
-                <div className="absolute top-[80vh] lg:top-[75vh] lg:mt-[10vh] self-center">
-                    <ViewAllButton id="pl_KohaCf3FavkjUC" />
-                </div>
-            </Link>
+            </div >{
+                process.env.NEXT_PUBLIC_TECH_PAY_BUTTON &&
+                <Link href="/events" passHref>
+                    <div className="absolute top-[80vh] lg:top-[75vh] lg:mt-[10vh] self-center">
+                        <ViewAllButton id={process.env.NEXT_PUBLIC_TECH_PAY_BUTTON} />
+                    </div>
+                </Link>
+            }
         </div >
 
     )

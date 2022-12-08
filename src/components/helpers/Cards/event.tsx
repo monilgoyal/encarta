@@ -45,7 +45,7 @@ function EventCard({ e }) {
                     <div className={"relative  w-full ".concat(" ", e.rounds === "" ? "h-[90%]" : "h-3/4")}>
                         <div className="lg:absolute bottom-0 w-full p-2 text-left">
                             <Link href={`/events/#${e.id}`} passHref >
-                                <h1 className="title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">{e.title}</h1>
+                                <h1 className="title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-base md:text-xl  font-semibold">{e.title}</h1>
                             </Link>
                             {/* <h6 className="title-font sm:text-xs text-xs font-medium text-white mb-2 ">{e.subtitle}</h6> */}
                             <Link href={`/events/#${e.id}`} passHref >
