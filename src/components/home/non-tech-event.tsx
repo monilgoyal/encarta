@@ -22,13 +22,11 @@ const NonTechnicalEvents = () => {
                 <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6"></div>
 
             </div>
-            {
-                process.env.NEXT_PUBLIC_TECH_PAY_BUTTON &&
-                <Link href="/events/#non-tech-event" passHref>
+            {/* <Link href="/events/#non-tech-event" passHref>
                     <div className="md:mt-[10vh] self-center absolute top-[75vh]">
                         <ViewAllButton id={process.env.NEXT_PUBLIC_NON_TECH_PAY_BUTTON} />
                     </div>
-                </Link>}
+                </Link> */}
         </div>
 
     )
