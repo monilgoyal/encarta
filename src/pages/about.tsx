@@ -18,7 +18,7 @@ function About() {
             <div className="container px-5 py-6 mx-auto flex flex-col text-white">
                 <div className="lg:w-4/6 mx-auto items-center text-center sm:text-justify justify-center">
                     <p className="leading-relaxed text-lg mb-4 " >
-                        The Department of Computer Science and Engineering, MBM University, is elated to announce its 23rd annual techfest from December 23–25, following its legacy since 1997. It incorporates both technical and non-technical events, which include coding relay, robotics, electronics, workshops, development events, and much more. Encarta is all set to provide an enriching experience to their witnesses. A wide range of events will be organized in both technical and non-technical fields to broaden students' knowledge in their chosen fields. It will prove to be a pivotal opportunity for youngsters striving for excellence in their career domain.
+                        The Department of Computer Science and Engineering, MBM University, is elated to announce its 23rd annual techfest from December 23–25, following its legacy since 1997. It incorporates both technical and non-technical events, which include coding relay, robotics, electronics, workshops, development events, and much more. Encarta is all set to provide an enriching experience to their witnesses. A wide range of events will be organized in both technical and non-technical fields to broaden students&apos;` knowledge in their chosen fields. It will prove to be a pivotal opportunity for youngsters striving for excellence in their career domain.
                     </p>
                 </div>
             </div>
