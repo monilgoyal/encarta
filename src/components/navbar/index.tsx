@@ -28,7 +28,7 @@ function Navbar() {
                 <div className="flex justify-between items-center border-gray-100 py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1 ">
                         <Link href='/' passHref>
-                            <div className="block title-font font-medium items-center mb-4 md:mb-0 w-16 h-12 hover:scale-125">
+                            <div className="block title-font font-medium items-center mb-4 md:mb-0 w-16 h-12 hover:scale-125 delay-150 duration-300">
                                 <Image src='/logo.png' width={20} height={20} className="rounded-full" alt="logo" layout='responsive'></Image>
                             </div>
                         </Link>
