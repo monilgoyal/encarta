@@ -19,7 +19,7 @@ function Cancellation_Policy() {
                     <div className='container mx-auto  leading-9'>
                         <ol className="list-disc list-inside">
                             <li >
-                                No cancellations & Refunds are entertained
+                                No refund shall be made if you cancel your resiteration for any event
                             </li>
                         </ol>
                     </div>

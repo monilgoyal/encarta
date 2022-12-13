@@ -16,7 +16,7 @@ function Privacy_policy() {
                 </div>
 
                 <section id='education' className="text-white body-font mx-auto  mb-4 py-4 px-5 md:px-15 lg:px-20 pt-10 lg:pt-12 text-lg lg:text-xl " >
-                    <div className='container mx-auto  leading-9 text-justify border-2 border-white border-opacity-10 backdrop-blur-[2px] bg-black/40 rounded-xl py-4 px-8 lg:px-12'>
+                    <div className='container mx-auto  leading-9 text-justify border-2 border-white border-opacity-10 backdrop-blur-[2px] bg-black/60 rounded-xl py-4 px-8 lg:px-12'>
                         <p>Please read this privacy policy carefully. By accessing or using The Encarta website, you
                             agree to be bound by the terms described herein and all the terms incorporated by reference.
                             If you do not adhere to all the below mentioned terms, do avoid using our website. Encarta (MBM-U) is committed to protect and respect your privacy. It has well defined

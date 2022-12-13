@@ -7,6 +7,7 @@ import { useState } from 'react'
 import Error from 'next/error'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../../state/reducers'
+import { ViewAllButton } from '../../../components/helpers/button/viewall'
 const EventPost = () => {
     const [rounds, setRounds] = useState(0)
     const router = useRouter()
@@ -32,7 +33,7 @@ const EventPost = () => {
                     <div className='text-white text-2xl md:text-3xl lg:text-4xl font-[Backsteal-Regular] mx-auto text-center mb-6 md:mb-12'>
                         <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >{data.title}</h1>
                     </div>
-                    <div className="lg:w-4/5 mx-auto flex flex-wrap-reverse border-2 border-white border-opacity-10 backdrop-blur-[2px] bg-black/40 rounded-xl px-2">
+                    <div className="lg:w-4/5 mx-auto flex flex-wrap-reverse border-2 border-white border-opacity-10 backdrop-blur-[2px] bg-black/60 rounded-xl px-2">
                         <div className="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0 text-white">
                             <div className='leading-relaxed text-sm md:text-base text-justify' dangerouslySetInnerHTML={{ __html: data.desc }} ></div>
                             {data.rules && data.rules.length != 0 && <>
@@ -90,13 +91,16 @@ const EventPost = () => {
                                 <span className="text-white">Entry</span>
                                 <span className="ml-auto text-white">{data.type}</span>
                             </div>
-                            <div className="flex justify-end">
-                                <span className="title-font font-medium text-2xl text-white ">₹ {data.fee[0]}</span>
-                                {/* <button className="disabled:cursor-not-allowed bg-gradient-to-r from-[#fb5131] via-[#f43253] to-[#e02170] flex ml-auto text-white border-0 py-2 px-6 focus:outline-none rounded" disabled={true}>Register</button> */}
+                            <div className="flex ">
+                                <span className="title-font font-medium text-2xl text-white ">{data.fee[0] != "Free" ? "₹" + data.fee[0] : "Free"}</span>
+                                {!data.pid && data.rlink && <a href={data.rlink} className="bg-gradient-to-r from-[#fb5131] via-[#f43253] to-[#e02170] flex ml-auto text-white border-0 py-2 px-6 focus:outline-none rounded">Register</a>}
+                                {data.pid && <div className="flex ml-auto border-0   focus:outline-none rounded">
+                                    <ViewAllButton id={data.pid} />
+                                </div>}
                             </div>
                         </div>
                         <div className="lg:w-1/2 w-full text-white py-4 lg:py-10 ">
-                            <Image className=' rounded-xl' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/a_3vthuj1p.jpg' width={600} height={400} objectFit="contain" layout='responsive' alt='event'></Image>
+                            <Image className=' rounded-xl' src={data.thumbUrl} width={600} height={400} objectFit="contain" layout='responsive' alt='event'></Image>
                         </div>
                     </div>
                 </div>

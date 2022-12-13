@@ -11,32 +11,6 @@ function EventCard({ e, type }) {
             }
         }
     })
-
-
-    // const scrollDivRight = (e) => {
-    //     e.target.closest('div').previousSibling.scrollLeft += 200
-    // }
-    // const scrollDivLeft = (e) => {
-    //     e.target.closest('div').nextSibling.scrollLeft -= 200
-    // }
-    // const IsEnd = (e) => {
-
-    //     if (e.target.scrollLeft + e.target.clientWidth + 1 >= e.target.scrollWidth) {
-    //         e.target.nextSibling.classList.add("hidden");                       // hide ">" button
-    //     } else {
-    //         e.target.nextSibling.classList.remove("hidden");                    // show ">" button
-
-    //     }
-
-    //     if (e.target.scrollLeft > 0) {
-    //         e.target.previousSibling.classList.add("hidden");  // hide "tech" text
-    //         e.target.previousSibling.classList.remove("hidden");               // show "<" button
-
-    //     } else if (e.target.scrollLeft == 0) {
-    //         e.target.previousSibling.classList.remove("hidden");    // show "tech" text
-    //         e.target.previousSibling.classList.add("hidden");                       // hide "<" button
-    //     }
-    // }
     return (
         <div className="flex flex-wrap-reverse w-4/5 sm:w-2/5 lg:w-3/5 lg:py-0 py-4 px-1  relative snap-center shrink-0 first:pl-8 last:pr-8 rounded-xl z-0 border-2 border-white border-opacity-10 backdrop-blur-sm bg-black/60" key={e.id}>
             {/* <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170]  rounded-xl blur-sm opacity-30 mx-1 my-3"></div> */}
@@ -68,10 +42,6 @@ function EventCard({ e, type }) {
                                 e.type &&
                                 <div className="leading-relaxed sm:text-base text-sm text-gray-400 " >Entry : {e.type}</div>
                             }
-                            {
-                                e.fee[0] == "Free" && e.rlink &&
-                                <div className="leading-relaxed sm:text-base text-sm text-gray-400 ">Register Link : <a href={e.rlink} target='_blank' rel="noreferrer" >Click Here</a> </div>
-                            }
                         </div>
                     </div>
                     {/* {
@@ -98,7 +68,7 @@ function EventCard({ e, type }) {
                     } */}
                 </div>
                 <div className="w-full lg:w-3/5 text-white self-center lg:py-10 ">
-                    <Image className=' rounded-xl' src={e.thumbUrl} width={600} height={400} objectFit="contain" layout='responsive' alt='monil goyal'></Image>
+                    <Image className=' rounded-xl' src={e.thumbUrl} width={550} height={400} objectFit="contain" layout='responsive' alt='monil goyal'></Image>
                 </div>
             </div>
         </div>
