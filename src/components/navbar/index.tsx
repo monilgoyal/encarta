@@ -29,7 +29,7 @@ function Navbar() {
                     <div className="flex justify-start lg:w-0 lg:flex-1 ">
                         <Link href='/' passHref>
                             <div className="block title-font font-medium items-center mb-4 md:mb-0 w-16 h-12 hover:scale-125">
-                                <Image src='/logo.png' width={20} height={20} className="rounded-full" alt="logo" layout='responsive'></Image>
+                                <Image src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/logo_qhk837zx.png' width={20} height={20} className="rounded-full" alt="logo" layout='responsive'></Image>
                             </div>
                         </Link>
                     </div>

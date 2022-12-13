@@ -15,8 +15,8 @@ function Privacy_policy() {
                     <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >Privacy Policy</h1>
                 </div>
 
-                <section id='education' className="text-white body-font mx-auto  mb-4 py-4 px-5 md:px-15 lg:px-20 pt-10 lg:pt-12 text-lg lg:text-xl" >
-                    <div className='container mx-auto  leading-9 text-justify '>
+                <section id='education' className="text-white body-font mx-auto  mb-4 py-4 px-5 md:px-15 lg:px-20 pt-10 lg:pt-12 text-lg lg:text-xl " >
+                    <div className='container mx-auto  leading-9 text-justify border-2 border-white border-opacity-10 backdrop-blur-[2px] bg-black/40 rounded-xl py-4 px-8 lg:px-12'>
                         <p>Please read this privacy policy carefully. By accessing or using The Encarta website, you
                             agree to be bound by the terms described herein and all the terms incorporated by reference.
                             If you do not adhere to all the below mentioned terms, do avoid using our website. Encarta (MBM-U) is committed to protect and respect your privacy. It has well defined
@@ -38,7 +38,7 @@ function Privacy_policy() {
                         <p>
                             This Privacy Policy has been designed and developed to help you understand the following:
                         </p>
-                        <ol className='list-decimal list-inside'>
+                        <ol className='list-decimal list-outside'>
                             <li>
                                 The type of Personal Information (including Sensitive Personal Data or Information) that Encarta collects from the users.
                             </li>
@@ -83,7 +83,7 @@ function Privacy_policy() {
                         <p>
                             Encarta will retain user Information only to the extent it is necessary to provide services to theusers. The information that the website collects from you may be utilized for various businessand/or regulatory purposes including for the following purposes:
                         </p>
-                        <ol className="list-decimal list-inside ">
+                        <ol className="list-decimal list-outside ">
                             <li>
                                 Registration of the user on the Website.
                             </li>
@@ -135,7 +135,7 @@ function Privacy_policy() {
                                 parties for the purposes mentioned in this Privacy Policy and the Terms of Use:
 
                             </p>
-                            <ol className='list-decimal list-inside'>
+                            <ol className='list-decimal list-outside'>
                                 <li>
                                     To Sellers and other service providers appointed by Encarta for the purpose of carrying out services on Encarta’s behalf under contract. Generally, these contractors do not have any independent right to share this information, however, certain contractors who provide services on the Website, including the providers of online communications services, will have the right to use and disclose the Personal Information collected in connection with the provision of these services in accordance with their own privacy policies.
                                 </li>
@@ -146,7 +146,7 @@ function Privacy_policy() {
                                 <li>
 
                                     To government institutions/ authorities to the extent required
-                                    <ol className='list-inside list-[upper-roman] ml-4'>
+                                    <ol className='list-outside list-[upper-roman] ml-4'>
                                         <li>
                                             Under the laws, rules, and regulations and/ or under orders of any relevant judicial or quasi-judicial authority.
                                         </li>
@@ -184,7 +184,7 @@ function Privacy_policy() {
                         </p>
                         <br />
                         <b>Links to third party advertisements:</b>
-                        <ol className='list-decimal list-inside'>
+                        <ol className='list-decimal list-outside'>
                             <li>
                                 The links to third-party advertisements, third-party websites or any third-party electronic communication services (referred to as “Third-Party Links”) may be provided on the Websitewhich is operated by third parties and are not controlled by, or affiliated to, or associated withEncarta unless expressly specified on the Website.
                             </li>

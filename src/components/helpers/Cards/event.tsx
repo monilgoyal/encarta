@@ -2,7 +2,7 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import Image from 'next/image'
-function EventCard({ e }) {
+function EventCard({ e, type }) {
     useEffect(() => {
         var ele = document.getElementsByClassName('skills')
         for (let i = 0; i < ele.length; i++) {
@@ -13,45 +13,47 @@ function EventCard({ e }) {
     })
 
 
-    const scrollDivRight = (e) => {
-        e.target.closest('div').previousSibling.scrollLeft += 200
-    }
-    const scrollDivLeft = (e) => {
-        e.target.closest('div').nextSibling.scrollLeft -= 200
-    }
-    const IsEnd = (e) => {
+    // const scrollDivRight = (e) => {
+    //     e.target.closest('div').previousSibling.scrollLeft += 200
+    // }
+    // const scrollDivLeft = (e) => {
+    //     e.target.closest('div').nextSibling.scrollLeft -= 200
+    // }
+    // const IsEnd = (e) => {
 
-        if (e.target.scrollLeft + e.target.clientWidth + 1 >= e.target.scrollWidth) {
-            e.target.nextSibling.classList.add("hidden");                       // hide ">" button
-        } else {
-            e.target.nextSibling.classList.remove("hidden");                    // show ">" button
+    //     if (e.target.scrollLeft + e.target.clientWidth + 1 >= e.target.scrollWidth) {
+    //         e.target.nextSibling.classList.add("hidden");                       // hide ">" button
+    //     } else {
+    //         e.target.nextSibling.classList.remove("hidden");                    // show ">" button
 
-        }
+    //     }
 
-        if (e.target.scrollLeft > 0) {
-            e.target.previousSibling.classList.add("hidden");  // hide "tech" text
-            e.target.previousSibling.classList.remove("hidden");               // show "<" button
+    //     if (e.target.scrollLeft > 0) {
+    //         e.target.previousSibling.classList.add("hidden");  // hide "tech" text
+    //         e.target.previousSibling.classList.remove("hidden");               // show "<" button
 
-        } else if (e.target.scrollLeft == 0) {
-            e.target.previousSibling.classList.remove("hidden");    // show "tech" text
-            e.target.previousSibling.classList.add("hidden");                       // hide "<" button
-        }
-    }
+    //     } else if (e.target.scrollLeft == 0) {
+    //         e.target.previousSibling.classList.remove("hidden");    // show "tech" text
+    //         e.target.previousSibling.classList.add("hidden");                       // hide "<" button
+    //     }
+    // }
     return (
-        <div className="flex flex-wrap-reverse w-4/5 sm:w-2/5 lg:w-3/5 lg:py-0 py-4 px-1 bg-opacity-60 bg-black relative snap-center shrink-0 first:pl-8 last:pr-8 rounded-xl z-0" key={e.id}>
-            <div className="text-center relative z-10 w-full flex flex-wrap-reverse">
-                <div className="w-full lg:w-2/5  text-white ">
+        <div className="flex flex-wrap-reverse w-4/5 sm:w-2/5 lg:w-3/5 lg:py-0 py-4 px-1  relative snap-center shrink-0 first:pl-8 last:pr-8 rounded-xl z-0 border-2 border-white border-opacity-10 backdrop-blur-sm bg-black/60" key={e.id}>
+            {/* <div className="absolute -inset-0.5 bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170]  rounded-xl blur-sm opacity-30 mx-1 my-3"></div> */}
+            <div className="text-center relative z-10 w-full flex flex-wrap-reverse   lg:my-2 rounded-xl">
+                <div className="w-full lg:w-2/5  text-white  ">
 
-                    <div className={"relative  w-full ".concat(" ", e.rounds === "" ? "h-[90%]" : "h-3/4")}>
+                    <div className={"relative  w-full h-[90%]"}>
+                        {/* <div className={"relative  w-full ".concat(" ", e.rounds === "" ? "h-[90%]" : "h-3/4")}> */}
                         <div className="lg:absolute bottom-0 w-full p-2 text-left">
-                            <Link href={`/events/#${e.id}`} passHref >
+                            <Link href={`/event/${type}/${e.id}`} passHref >
                                 <h1 className="title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-base md:text-xl  font-semibold">{e.title}</h1>
                             </Link>
                             {/* <h6 className="title-font sm:text-xs text-xs font-medium text-white mb-2 ">{e.subtitle}</h6> */}
-                            <Link href={`/events/#${e.id}`} passHref >
+                            <Link href={`/event/${type}/${e.id}`} passHref >
                                 <div className="leading-relaxed sm:text-base text-sm text-white text-justify cursor-pointer" dangerouslySetInnerHTML={{ __html: e.desc.substring(0, 100).concat(e.desc.length > 100 ? `  ...<span style="color:#E93E53;cursor:pointer;">Read More</span>` : '') }} ></div>
                             </Link>
-                            <Link href={`/events/#${e.id}`} passHref >
+                            <Link href={`/event/${type}/${e.id}`} passHref >
                                 <div className="leading-relaxed sm:text-base text-sm text-gray-400 mt-2" dangerouslySetInnerHTML={{ __html: e.detail }} ></div>
                             </Link>
                             {
@@ -59,20 +61,20 @@ function EventCard({ e }) {
                                 <div className="leading-relaxed sm:text-base text-sm text-gray-400 mt-2"  >Venue : {e.venue}</div>
                             }
                             {
-                                e.price &&
-                                <div className="leading-relaxed sm:text-base text-sm text-gray-400 ">Fee : {e.price != "Free" ? "₹" + e.price : "Free"}</div>
+                                e.fee &&
+                                <div className="leading-relaxed sm:text-base text-sm text-gray-400 ">Fee : {e.fee[0] != "Free" ? "₹" + e.fee[0] : "Free"}</div>
                             }
                             {
                                 e.type &&
                                 <div className="leading-relaxed sm:text-base text-sm text-gray-400 " >Entry : {e.type}</div>
                             }
                             {
-                                e.price == "Free" && e.rlink &&
+                                e.fee[0] == "Free" && e.rlink &&
                                 <div className="leading-relaxed sm:text-base text-sm text-gray-400 ">Register Link : <a href={e.rlink} target='_blank' rel="noreferrer" >Click Here</a> </div>
                             }
                         </div>
                     </div>
-                    {
+                    {/* {
                         e.rounds != "" &&
                         <div className="text-center flex flex-col leading-8 justify-center mt-2 w-full  text-gray-500 space-y-2 h-1/5">
                             <div className="flex mx-2 relative rounded-full">
@@ -93,7 +95,7 @@ function EventCard({ e }) {
                                 </div>
                             </div>
                         </div>
-                    }
+                    } */}
                 </div>
                 <div className="w-full lg:w-3/5 text-white self-center lg:py-10 ">
                     <Image className=' rounded-xl' src={e.thumbUrl} width={600} height={400} objectFit="contain" layout='responsive' alt='monil goyal'></Image>

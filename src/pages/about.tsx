@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Navbar from '../components/navbar'
+import Marquee from "react-fast-marquee";
+import { Sponsor } from '../data/sponsors'
+
 // import { Social_SVG } from '../components/helpers/social'
 // import Slider from '../components/slider/Slider'
 
@@ -15,6 +18,7 @@ function About() {
             <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-8'>
                 <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#e93e53] to-[#E02170]' >About Encarta</h1>
             </div>
+
             <div className="container px-5 py-6 mx-auto flex flex-col text-white">
                 <div className="lg:w-4/6 mx-auto items-center text-center sm:text-justify justify-center">
                     <p className="leading-relaxed text-lg mb-4 " >
@@ -109,6 +113,7 @@ function About() {
                     </div>
                 </div>
             </section>
+
             {/* <Slider></Slider> */}
             <Footer />
         </>

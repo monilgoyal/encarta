@@ -18,7 +18,7 @@ function Footer() {
 
                                     <Link href='/' passHref>
                                         <div className="block   items-center mb-4 lg:mb-0 w-16 h-16 ">
-                                            <Image src='/mbm.png' width={20} height={20} className="rounded-full" alt="logo" layout='responsive'></Image>
+                                            <Image src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/logo-1_n8nyggxn.png' width={20} height={20} className="rounded-full" alt="logo" layout='responsive'></Image>
                                         </div>
                                     </Link>
                                 </div>

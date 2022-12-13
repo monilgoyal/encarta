@@ -15,7 +15,7 @@ function Cancellation_Policy() {
                     <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >Cancellation and Refund Policy</h1>
                 </div>
 
-                <section id='education' className="text-white body-font mx-auto  mb-4 py-4 px-5 md:px-15 lg:px-20 pt-10 lg:pt-12 text-lg lg:text-xl" >
+                <section id='education' className="text-white body-font mx-auto  mb-4 py-4 px-5 md:px-15 lg:px-20 pt-10 lg:pt-12 text-lg lg:text-xl " >
                     <div className='container mx-auto  leading-9'>
                         <ol className="list-disc list-inside">
                             <li >

@@ -20,7 +20,7 @@ const ClubPerformance = () => {
             <div id='scrollCertificate' className="relative w-screen flex gap-x-6 snap-x overflow-x-auto overflow-y-hidden  snap-mandatory no-scrollbar  mt-[12vh] ">
                 <div className="  sm:snap-center shrink-0  w-1/5 sm:w-[calc(15%)] md:w-[calc(20%)] lg:w-[calc(25%)] xl:w-[calc(31%)] "></div>
 
-                {JSON.stringify(EventInitialState) != JSON.stringify(events) && Object.values(events.Events.CLUB).map((e: any, index) => (
+                {JSON.stringify(EventInitialState) != JSON.stringify(events) && events.Events.CLUB && Object.values(events.Events.CLUB).map((e: any, index) => (
                     <div className="snap-center shrink-0  max-w-lg w-4/5 sm:w-2/5 lg:w-3/5  rounded-lg  " key={e.id}>
                         <div className=" lg:mb-0 max-w-[320px]  text-center mx-auto w-full ">
                             <div className={"block rounded-lg shadow-lg".concat(' ', index % 2 == 0 ? 'bg-white' : 'bg-black')}>
