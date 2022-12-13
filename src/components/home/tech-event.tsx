@@ -14,9 +14,15 @@ const TechnicalEvents = () => {
             </div>
             <div className='relative w-full flex gap-x-6 lg:gap-x-12 snap-x overflow-x-auto  snap-mandatory no-scrollbar mt-[5vh] '>
                 <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6"></div>
-                {JSON.stringify(EventInitialState) != JSON.stringify(events) && Object.values(events.Events.TECH).map((e: any) => (
-                    <EventCard e={e} key={e.id} />
-                ))}
+                {JSON.stringify(EventInitialState) != JSON.stringify(events) && <>
+                    {
+                        events.Events.TECH &&
+                        Object.values(events.Events.TECH).map((e: any) => (
+                            <EventCard e={e} key={e.id} />
+                        ))
+                    }
+                </>
+                }
                 <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6" ></div>
 
             </div >{

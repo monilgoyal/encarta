@@ -1,5 +1,5 @@
 import { contactFormAction } from "../action-creator/actionType"
-const IsContactFormOpen = (state = false, action: { type: string }) => {
+const IsContactFormOpen = (state = true, action: { type: string }) => {
     if (action.type === contactFormAction) {
         return !state
     } else {

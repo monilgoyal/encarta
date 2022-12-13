@@ -15,28 +15,28 @@ function Social(props: socialType) {
 			<span className='mx-2'>
 				<Link href="https://www.facebook.com/EncartaMBM?mibextid=ZbWKwL" >
 					<a target="_blank" aria-label='linkedin'>
-						<FiFacebook className='text-2xl' aria-hidden="true" stroke={props.fill} />
+						<FiFacebook className='text-2xl hover:-translate-y-3 delay-150 duration-300' aria-hidden="true" stroke={props.fill} />
 					</a>
 				</Link>
 			</span>
 			<span className='mr-2'>
 				<Link href="https://www.youtube.com/channel/UCWnoHVlyprKAwg-uMqWiQkg">
 					<a target="_blank" aria-label="github">
-						<FiYoutube className='text-[1.65rem]' aria-hidden="true" stroke={props.fill} />
+						<FiYoutube className='text-[1.65rem] hover:-translate-y-3 delay-150 duration-300' aria-hidden="true" stroke={props.fill} />
 					</a>
 				</Link>
 			</span>
 			<span className='mx-2'>
 				<Link href="https://www.instagram.com/encarta_mbm" >
 					<a target="_blank" aria-label='instagram'>
-						<FaInstagram className='text-2xl' aria-hidden="true" fill={props.fill} />
+						<FaInstagram className='text-2xl hover:-translate-y-3 delay-150 duration-300' aria-hidden="true" fill={props.fill} />
 					</a>
 				</Link>
 			</span>
 			<span className='mx-2'>
 				<Link href="mailto:contact@encarta.tech" >
 					<a target="_blank" aria-label='linkedin'>
-						<FiMail className='text-2xl' aria-hidden="true" stroke={props.fill} />
+						<FiMail className='text-2xl hover:-translate-y-3 delay-150 duration-300' aria-hidden="true" stroke={props.fill} />
 					</a>
 				</Link>
 			</span>

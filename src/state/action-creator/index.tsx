@@ -19,7 +19,8 @@ export const getEvents = () => dispatch =>
                     Events: response
                 }
             });
-        }).catch(() => {
+        })
+        .catch(() => {
             dispatch({
                 type: FETCH_EVENT_DATA,
                 payload: {

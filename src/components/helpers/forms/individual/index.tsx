@@ -121,7 +121,7 @@ function Individual({ formObject }) {
             tempErrors["name"] = true;
             isValid = false;
         }
-        if (phone.length <= 10) {
+        if (phone.length <= 10 && phone.length > 10) {
             tempErrors["invalidPhone"] = true;
             isValid = false;
         }
@@ -324,7 +324,7 @@ function Individual({ formObject }) {
                         <div className="inline text-red-600">*</div>
                     </div>
                     <div className='my-2'>
-                        <input type="text" className={'py-2 border-0 border-b w-full block outline-none border-solid text-sm h-14 bg-transparent dark:border-gray-500 dark:text-gray-200  focus:border-b-2'.concat(' ', errors['phone'] || errors['invalidPhone'] ? 'border-red-600 ' : 'border-gray-300 focus:border-gray-400')} placeholder='+91'
+                        <input type="tel" className={'py-2 border-0 border-b w-full block outline-none border-solid text-sm h-14 bg-transparent dark:border-gray-500 dark:text-gray-200  focus:border-b-2'.concat(' ', errors['phone'] || errors['invalidPhone'] ? 'border-red-600 ' : 'border-gray-300 focus:border-gray-400')} placeholder='+91'
                             value={phone}
                             onChange={(e) => {
                                 setPhone(e.target.value);
@@ -425,7 +425,7 @@ function Individual({ formObject }) {
                         </div>}
                 </div> */}
                 <div className='mx-8'>
-                    <button type='submit' className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-500 hover:bg-indigo-600"> Send </button>
+                    <button type='submit' className="w-full flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-500 hover:bg-indigo-600">Submit </button>
                 </div>
             </div>
         </form> :

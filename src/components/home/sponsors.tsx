@@ -18,7 +18,8 @@ const Sponsors = () => {
                 delay={0}
                 play={true}
                 direction="left"
-            >{
+            >
+                {
                     Sponsor.map((s) => (
                         <div className="flex justify-center align-middle  bg-transparent mx-6  " key={s.id} >
                             <div className='w-80'>

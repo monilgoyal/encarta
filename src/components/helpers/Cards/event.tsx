@@ -2,6 +2,7 @@ import Link from 'next/link'
 import React, { useEffect } from 'react'
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 import Image from 'next/image'
+
 function EventCard({ e }) {
     useEffect(() => {
         var ele = document.getElementsByClassName('skills')
