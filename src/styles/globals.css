@@ -241,3 +241,22 @@ a {
 .star-field .layer:nth-child(3) {
     animation: sf-fly-by-3 5s linear infinite;
 }
+
+.PaymentButton--rzpTheme.svelte-ekc7fv.svelte-ekc7fv::before {
+    background: transparent !important;
+}
+
+.PaymentButton--rzpTheme.svelte-ekc7fv.svelte-ekc7fv {
+    border-radius: 4px !important;
+}
+
+.PaymentButton {
+    background: transparent;
+    border: 0;
+}
+
+.PaymentButton--rzp-dark-standard.svelte-ekc7fv.svelte-ekc7fv {
+    background: none !important;
+    border: 0 !important;
+    background-image: linear-gradient(to right bottom, #fb5131, #f94c39, #f64840, #f34446, #ef414c, #ed3d51, #eb3955, #e8365a, #e7305f, #e52b65, #e3266a, #e02170) !important;
+}
