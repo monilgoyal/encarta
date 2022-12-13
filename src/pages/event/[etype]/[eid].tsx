@@ -90,9 +90,9 @@ const EventPost = () => {
                                 <span className="text-white">Entry</span>
                                 <span className="ml-auto text-white">{data.type}</span>
                             </div>
-                            <div className="flex">
-                                <span className="title-font font-medium text-2xl text-white">₹ {data.fee[0]}</span>
-                                <button className="disabled:cursor-not-allowed bg-gradient-to-r from-[#fb5131] via-[#f43253] to-[#e02170] flex ml-auto text-white border-0 py-2 px-6 focus:outline-none rounded" disabled={true}>Register</button>
+                            <div className="flex justify-end">
+                                <span className="title-font font-medium text-2xl text-white ">₹ {data.fee[0]}</span>
+                                {/* <button className="disabled:cursor-not-allowed bg-gradient-to-r from-[#fb5131] via-[#f43253] to-[#e02170] flex ml-auto text-white border-0 py-2 px-6 focus:outline-none rounded" disabled={true}>Register</button> */}
                             </div>
                         </div>
                         <div className="lg:w-1/2 w-full text-white py-4 lg:py-10 ">
