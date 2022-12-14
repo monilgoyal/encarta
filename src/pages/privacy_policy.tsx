@@ -12,7 +12,7 @@ function Privacy_policy() {
             <section className=" py-20 lg:py-24  min-h-[50vh] md:min-h-[70vh] ">
 
                 <div className='text-white text-xl md:text-2xl lg:text-3xl font-[Backsteal-Regular] mx-auto text-center md:mb-12'>
-                    <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >Privacy Policy</h1>
+                    <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170]' >Privacy Policy</h1>
                 </div>
 
                 <section id='education' className="text-white body-font mx-auto  mb-4 py-4 px-5 md:px-15 lg:px-20 pt-10 lg:pt-12 text-lg lg:text-xl " >

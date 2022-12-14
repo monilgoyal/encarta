@@ -15,7 +15,7 @@ const ClubPerformance = () => {
 
         <div className='flex flex-col justify-center align-middle w-full py-16 lg:py-20'>
             <div className='text-white text-2xl md:text-3xl lg:text-4xl font-semibold mx-auto text-center'>
-                <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]'>ICC Events</h1>
+                <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170]'>ICC Events</h1>
             </div>
             <div id='scrollCertificate' className="relative w-screen flex gap-x-6 snap-x overflow-x-auto overflow-y-hidden  snap-mandatory no-scrollbar  mt-[12vh] ">
                 <div className="  sm:snap-center shrink-0  w-1/5 sm:w-[calc(15%)] md:w-[calc(20%)] lg:w-[calc(25%)] xl:w-[calc(31%)] "></div>

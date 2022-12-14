@@ -10,7 +10,7 @@ const TechnicalEvents = () => {
     return (
         <div className=' flex flex-col justify-center align-middle w-full py-16 lg:py-20'>
             <div className='text-white  text-2xl md:text-3xl lg:text-4xl font-semibold mx-auto text-center'>
-                <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]'>Tech Events</h1>
+                <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170]'>Tech Events</h1>
             </div>
             <div className='relative w-full flex gap-x-6 lg:gap-x-12 snap-x overflow-x-auto  snap-mandatory no-scrollbar mt-[5vh] '>
                 <div className="snap-center shrink-0 w-[calc(4%)] md:w-1/12 lg:w-1/6"></div>

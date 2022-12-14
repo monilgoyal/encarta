@@ -16,7 +16,7 @@ function About() {
             <Header title="About Encarta" header_content="About Encarta" />
             <Navbar />
             <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-8'>
-                <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#e93e53] to-[#E02170]' >About Encarta</h1>
+                <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#e93e53] to-[#E02170]' >About Encarta</h1>
             </div>
 
             <div className="container px-5 py-6 mx-auto flex flex-col text-white">
@@ -41,7 +41,7 @@ function About() {
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/27-1_rfl1dpqh.jpg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">N.C. BARWAR</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">N.C. BARWAR</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
                                     <p className="text-base">HOD, DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</p>
                                 </div>
@@ -82,7 +82,7 @@ function About() {
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/299879726_1227725241360586_7954635754734882989_n_ylecrpzh.jpg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">ABHISEK GOUR</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">ABHISEK GOUR</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
                                     <p className="text-base">ENCARTA FACULTY CO-ORDINATOR</p>
                                 </div>

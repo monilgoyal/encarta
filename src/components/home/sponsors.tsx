@@ -3,31 +3,12 @@ import Image from 'next/image'
 import { EventInitialState } from '../../state/reducers/eventDataReducer'
 
 const Sponsors = () => {
-    const events = {
-        500: {
-            "title": "Love Babar",
-            "desc": "Youtuber",
-            "thumbUrl": "https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/unnamed_r9iijtnt.jpg",
-            "date": "23 December",
-            "time": "5:00 PM",
-            "price": 100
-        },
-        501: {
-            "title": "Aman Dhattarwal",
-            "desc": "Youtuber",
-            "thumbUrl": "https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/amn3_idj8nzqv.webp",
-            "date": "23 December",
-            "time": "5:00 PM",
-            "price": 100
-        }
-    }
-    // const events = useSelector((state: RootState) => state.EventData)
 
     return (
         <section className="text-white body-font bg-transparent">
             <div className="container px-5 py-12 mx-auto">
-                <div className='text-white  text-3xl md:text-4xl lg:text-5xl font-semibold mx-auto text-center'>
-                    <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170] sm:py-4'>Our Sponsors</h1>
+                <div className='text-white  text-3xl md:text-4xl lg:text-5xl font-semibold mx-auto text-center '>
+                    <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170] sm:py-4 '>Our Sponsors</h1>
                 </div>
                 <div className="container px-5 pt-6  mx-auto flex items-center  flex-col">
                     <div className='w-36 h-36'>
@@ -56,7 +37,7 @@ const Sponsors = () => {
                         </div>
                         <div className="flex flex-col mb-6  pr-0 w-full  text-center">
                             <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
-                            <h1 className="md:text-xl text-lg font-medium title-font text-white">Event Partner</h1>
+                            <h1 className="md:text-xl text-lg font-medium title-font text-white">Food Partner</h1>
                         </div>
 
                     </div>

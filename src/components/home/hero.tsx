@@ -21,7 +21,7 @@ function Hero() {
                 <div className='w-full flex flex-col justify-center mx-auto  '>
                     <div>
 
-                        <h1 className='text-4xl md:text-8xl  text-white text-center tracking-[.4em] animate-text1_bt  mr-[-0.4em] mb-[-0.2em] font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170] ' >Encarta</h1>
+                        <h1 className='text-4xl md:text-8xl  text-white text-center tracking-[.4em] animate-text1_bt  mr-[-0.4em] mb-[-0.2em] font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170] ' >Encarta</h1>
                         <h2 className='text-sm md:text-2xl md:tracking-[1.2rem] tracking-[.3rem]  text-white text-center   font-extralight  animate-text2_bt mb-5  md:mb-0 font-[Eirian] ' >THE ANNUAL TECHNICAL FEST</h2>
                     </div>
 

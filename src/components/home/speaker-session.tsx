@@ -11,7 +11,7 @@ const Speakers = () => {
         <section className="text-gray-400 body-font bg-transparent">
             <div className="container px-5 py-12 mx-auto">
                 <div className='text-white  text-3xl md:text-4xl lg:text-5xl font-semibold mx-auto text-center'>
-                    <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170] sm:py-4'>Spearkers</h1>
+                    <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170] sm:py-4'>Spearkers</h1>
                 </div>
                 <div className=' flex flex-col md:flex-row justify-around mt-4 gap-8 align-middle'>
                     {JSON.stringify(EventInitialState) != JSON.stringify(events) && Object.values(events.Events.SPEAKERS).map((e: any) => (

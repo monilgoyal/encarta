@@ -29,7 +29,7 @@ function Schedule() {
                     schedule && <>
 
                         <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-12'>
-                            <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170]' >Schedule</h1>
+                            <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170]' >Schedule</h1>
                         </div>
 
                         <section id='education' className="text-gray-400 body-font mx-auto  mb-4 py-4" >
