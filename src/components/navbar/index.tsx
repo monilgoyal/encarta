@@ -14,6 +14,8 @@ import { actionCreator } from '../../state';
 import Social from '../helpers/social';
 import { BsCalendarEvent } from 'react-icons/bs';
 import { MdSchedule } from 'react-icons/md';
+import { FaInfo } from 'react-icons/fa';
+
 function Navbar() {
     const router = useRouter();
     const dispatch = useDispatch()
@@ -21,7 +23,7 @@ function Navbar() {
     const toggleDrawer = bindActionCreators(actionCreator.drawerToggle, dispatch)
 
     // const toggleContactForm = bindActionCreators(actionCreator.contactFormToggle, dispatch)
-    const routeLinkStyle = "mr-5 font-medium hover:text-[#fff] hover:opacity-100 text-xl hover:scale-110"
+    const routeLinkStyle = "font-semibold hover:text-[#fff] hover:opacity-100 text-xl hover:scale-110"
     return (
         <div className="relative bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -37,9 +39,10 @@ function Navbar() {
                     <div className="-mr-2 -my-2 md:hidden">
                         <DrawerToggler />
                     </div>
-                    <nav className="hidden md:flex space-x-10  ">
-                        <Link href="/" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/" ? "text-[#FB5131] hover:text-[#FB5131] " : "text-gray-200   opacity-80")}>HOME</a></Link>
+                    <nav className="hidden md:flex space-x-7  ">
+                        <Link href="/" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/" ? "text-[#FB5131] hover:text-[#FB5131]" : "text-gray-200   opacity-80")}>HOME</a></Link>
                         <Link href="/events" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/events" ? "text-[#FB5131] hover:text-[#FB5131]" : "text-gray-200 opacity-80")}>EVENTS</a></Link>
+                        <Link href="/sponsor" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/sponsor" ? "text-[#FB5131]" : "text-gray-200 opacity-80")}>SPONSORS</a></Link>
                         <Link href="/schedule" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/schedule" ? "text-[#FB5131] hover:text-[#FB5131]" : "text-gray-200 opacity-80")}>SCHEDULE</a></Link>
                         <Link href="/about" passHref><a className={routeLinkStyle.concat(" ", router.pathname == "/about" ? "text-[#FB5131]" : "text-gray-200 opacity-80")}>ABOUT</a></Link>
                     </nav>
@@ -69,22 +72,28 @@ function Navbar() {
                                 </Link>
 
                                 <Link href="/events" passHref>
-                                    <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">
+                                    <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-800">
                                         <BsCalendarEvent className='text-2xl  ' fill='url(#svg-gradient)' />
                                         <span className="ml-6 text-base font-medium "> Events </span>
                                     </a>
                                 </Link>
 
 
+                                <Link href="/sponsor" passHref>
+                                    <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-800">
+                                        <SiHandshake className='text-2xl' fill='url(#svg-gradient)' />
+                                        <span className="ml-6 text-base font-medium "> Sponsors </span>
+                                    </a>
+                                </Link>
                                 <Link href="/schedule" passHref>
-                                    <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">
+                                    <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-800">
                                         <MdSchedule className='text-2xl' fill='url(#svg-gradient)' />
                                         <span className="ml-6 text-base font-medium "> Schedule </span>
                                     </a>
                                 </Link>
                                 <Link href="/about" passHref>
-                                    <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-50 dark:hover:bg-gray-800">
-                                        <SiHandshake className='text-2xl' fill='url(#svg-gradient)' />
+                                    <a onClick={toggleDrawer} className="-m-3 p-3 flex items-center rounded-md hover:bg-gray-800">
+                                        <FaInfo className='text-xl' fill='url(#svg-gradient)' />
                                         <span className="ml-6 text-base font-medium "> About </span>
                                     </a>
                                 </Link>

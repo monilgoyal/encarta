@@ -11,24 +11,17 @@ import { ViewAllButton } from '../../../components/helpers/button/viewall'
 const EventPost = () => {
     const [rounds, setRounds] = useState(0)
     const router = useRouter()
-    const { etype, eid } = router.query
+    const { eid } = router.query
     const events = useSelector((state: RootState) => state.EventData)
 
-    if (etype != 'tech' && etype != 'non_tech') {
-        return <Error statusCode={404} />
-    }
-
-    const data = etype == 'tech' && events.Events.TECH ? events.Events.TECH[eid.toString()] : events.Events.NON_TECH ? events.Events.NON_TECH[eid.toString()] : {}
-
-    if (data == null) {
-        return <Error statusCode={404} />
-    }
+    const data = events.Events.NON_TECH ? events.Events.NON_TECH[eid.toString()] : null
     return (<>
         <Header title="Encarta - Events" header_content="Events in Encarta" />
         <Navbar />
         <section className="text-gray-600 body-font overflow-hidden min-h-[70vh]">
+            {!data && <div className='text-white absolute top-[40%] md:top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xl font-bold animate-pulse'>Loading...</div>}
             {
-                JSON.stringify({}) != JSON.stringify(data) &&
+                data && JSON.stringify({}) != JSON.stringify(data) &&
                 <div className="container px-5 py-12 md:py-24 mx-auto">
                     <div className='text-white text-2xl md:text-3xl lg:text-4xl font-[Backsteal-Regular] mx-auto text-center mb-6 md:mb-12'>
                         <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170]' >{data.title}</h1>
@@ -76,7 +69,7 @@ const EventPost = () => {
                             }
                             <div className="flex border-t border-gray-200 py-2 mt-3">
                                 <span className="text-white">Event Type</span>
-                                <span className="ml-auto text-white">{etype == "tech" ? "Technical" : "Non-Technical"}</span>
+                                <span className="ml-auto text-white">Non-Technical</span>
                             </div>
                             {data.mode && <div className="flex border-t border-gray-200 py-2">
                                 <span className="text-white">Mode</span>

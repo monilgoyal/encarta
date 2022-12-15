@@ -1,6 +1,5 @@
 import React from 'react'
 import Image from 'next/image'
-import { EventInitialState } from '../../state/reducers/eventDataReducer'
 
 const Sponsors = () => {
 
