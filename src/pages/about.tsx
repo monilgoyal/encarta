@@ -3,6 +3,9 @@ import Image from 'next/image'
 import Footer from '../components/footer'
 import Header from '../components/header'
 import Navbar from '../components/navbar'
+import Marquee from "react-fast-marquee";
+import { Sponsor } from '../data/sponsors'
+
 // import { Social_SVG } from '../components/helpers/social'
 // import Slider from '../components/slider/Slider'
 
@@ -15,6 +18,7 @@ function About() {
             <div className='text-white text-3xl md:text-4xl lg:text-5xl font-[Backsteal-Regular] mx-auto text-center md:mb-8'>
                 <h1 className='text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] via-[#e93e53] to-[#E02170]' >About Encarta</h1>
             </div>
+
             <div className="container px-5 py-6 mx-auto flex flex-col text-white">
                 <div className="lg:w-4/6 mx-auto items-center text-center sm:text-justify justify-center">
                     <p className="leading-relaxed text-lg mb-4 " >
@@ -28,6 +32,72 @@ function About() {
                 </div>
             </div> */}
 
+            <section className="text-white body-font">
+                <div className="container px-5 py-6 mx-auto flex flex-col">
+                    <div className="lg:w-4/6 mx-auto">
+                        <div className="flex flex-col sm:flex-row mt-10">
+                            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8 flex flex-col justify-center align-middle items-center self-center">
+                                <div className='w-28 h-28 rounded-full mx-auto border border-transparent dark:border-indigo-600 p-1'>
+                                    <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/638b22078c1aac0011545658/638b220c8c1aac001154565a/images/vc-sir_bqn48f8a.jpeg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col items-center text-center justify-center">
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">AJAY KUMAR SHARMA</h2>
+                                    {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
+                                    <p className="text-base">VICE CHANCELLOR</p>
+                                </div>
+                            </div>
+                            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-justify">
+
+                                <p className="leading-relaxed text-lg mb-4">Dear Students,
+                                    Engineering is revered to be a highly respected profession in most countries because of its immense contribution to the growth and development of any society. Unsurprisingly, an engineer has to acquire a lot of skills required to execute professional tasks like product development, process refinement, team management, market research etc. to be able to fulfill the expectations of the industry and society. While the academics and curricular activities offer a great opportunity to develop technical and professional skills, it is equally important to develop interpersonal and management skills as a student.
+
+
+                                </p>
+                                <p className='leading-relaxed text-lg mb-4'>I am happy to know that the Department of Computer Science and Engineering of our University is organizing the 23rd edition of the ENCARTA festival which will include a lot of opportunities to demonstrate and learn, both, technical and non-technical skills, in a joyful and inspirational environment. I appreciate the efforts of the students, teachers, and the whole organizing team for taking the initiative and wish them the best for the successful completion of the event.
+                                </p>
+                                {/* <p className='leading-relaxed text-lg mb-4'>Attaining knowledge is a life-long process and is extremely significant for one&apos;s overall
+                                    development. &quot;Children must be taught how to think, not what to think&quot;, is the quote
+                                    I&apos;d like to use to wrap up my message.
+                                </p>
+                                <p className='leading-relaxed text-lg mb-4'>Looking forward towards your proactive involvement and i wish a great success of ENCARTA 22.
+                                </p> */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="text-white body-font">
+                <div className="container px-5 py-6 mx-auto flex flex-col">
+                    <div className="lg:w-4/6 mx-auto">
+                        <div className="flex flex-col sm:flex-row mt-10">
+                            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8 flex flex-col justify-center align-middle items-center self-center">
+                                <div className='w-28 h-28 rounded-full mx-auto border border-transparent dark:border-indigo-600 p-1'>
+                                    <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/638b22078c1aac0011545658/638b220c8c1aac001154565a/images/dean-sir_8y3vtm6i.png' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col items-center text-center justify-center">
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">SUNIL SHARMA</h2>
+                                    {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
+                                    <p className="text-base">DEAN</p>
+                                </div>
+                            </div>
+                            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-justify">
+
+                                <p className="leading-relaxed text-lg mb-4">Dear Students,
+                                    I am pleased to announce that the Department of Computer Science and Engineering, Faculty of Engineering & Architecture, MBM University is organizing the 23rd edition of ENCARTA, an annual technical festival, from 23-25 December 2022. Starting from 1997, ENCARTA has always been a great platform for students to develop their technical and management skills. I am delighted to know about all the technical and non-technical competitions, workshops, speaker sessions, and panel discussions planned for this edition. I would like to congratulate the whole ENCARTA team on planning such a huge event and extend my support and wishes for a successful organization.
+                                </p>
+                                <p className='leading-relaxed text-lg mb-4'>Students from all disciplines are encouraged to actively participate in the event while considering it as a unique opportunity to enrich their knowledge and assess their preparation in a fun and friendly way.
+                                </p>
+                                {/* <p className='leading-relaxed text-lg mb-4'>Attaining knowledge is a life-long process and is extremely significant for one&apos;s overall
+                                    development. &quot;Children must be taught how to think, not what to think&quot;, is the quote
+                                    I&apos;d like to use to wrap up my message.
+                                </p>
+                                <p className='leading-relaxed text-lg mb-4'>Looking forward towards your proactive involvement and i wish a great success of ENCARTA 22.
+                                </p> */}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="text-white body-font">
                 <div className="container px-5 py-6 mx-auto flex flex-col">
                     <div className="lg:w-4/6 mx-auto">
@@ -109,6 +179,7 @@ function About() {
                     </div>
                 </div>
             </section>
+
             {/* <Slider></Slider> */}
             <Footer />
         </>
