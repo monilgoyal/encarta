@@ -20,7 +20,7 @@ const Sponsors = () => {
 
                 </div>
                 <div className='flex flex-row '>
-                    <div className='w-full md:w-1/2 items-center'>
+                    <div className='w-1/2 items-center'>
                         <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
                             <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/Screenshot_2022-12-13_034815-removebg-preview_84pv0k1v.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
                         </div>
@@ -30,7 +30,17 @@ const Sponsors = () => {
                         </div>
 
                     </div>
-                    <div className='w-full md:w-1/2 items-center'>
+                    {/* <div className='w-1/2 items-center'>
+                        <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
+                            <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/Screenshot_2022-12-15_193632-removebg-preview_c1z6d4uj.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
+                        </div>
+                        <div className="flex flex-col mb-6  pr-0 w-full  text-center">
+                            <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
+                            <h1 className="md:text-xl text-lg font-medium title-font text-white">Event Partner</h1>
+                        </div>
+
+                    </div> */}
+                    <div className='w-1/2 items-center'>
                         <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
                             <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/BROTHERS_FOOD_LOGO_page-0001-removebg-preview-4_gk5wn714.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
                         </div>

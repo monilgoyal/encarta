@@ -23,7 +23,7 @@ function Navbar() {
     const toggleDrawer = bindActionCreators(actionCreator.drawerToggle, dispatch)
 
     // const toggleContactForm = bindActionCreators(actionCreator.contactFormToggle, dispatch)
-    const routeLinkStyle = "font-semibold hover:text-[#fff] hover:opacity-100 text-xl hover:scale-110"
+    const routeLinkStyle = "font-medium hover:text-[#fff] hover:opacity-100 text-xl hover:scale-110"
     return (
         <div className="relative bg-transparent">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">

@@ -48,7 +48,7 @@ a {
 @tailwind components;
 @tailwind utilities;
 ::-webkit-scrollbar {
-    @apply w-2 rounded-full cursor-pointer
+    @apply w-2 h-1 rounded-full cursor-pointer
 }
 
 ::-webkit-scrollbar-track {

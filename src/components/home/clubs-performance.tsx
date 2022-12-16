@@ -21,7 +21,7 @@ const ClubPerformance = () => {
                 <div className="  sm:snap-center shrink-0  w-1/5 sm:w-[calc(15%)] md:w-[calc(20%)] lg:w-[calc(25%)] xl:w-[calc(31%)] "></div>
 
                 {JSON.stringify(EventInitialState) != JSON.stringify(events) && events.Events.CLUB && Object.values(events.Events.CLUB).map((e: any, index) => (
-                    <div className="snap-center shrink-0  max-w-lg w-4/5 sm:w-2/5 lg:w-3/5  rounded-lg  " key={e.id}>
+                    <div className="snap-center shrink-0  max-w-lg w-3/4 sm:w-2/5 lg:w-3/5  rounded-lg  " key={e.id}>
                         <div className=" lg:mb-0 max-w-[320px]  text-center mx-auto w-full ">
                             <div className={"block rounded-lg shadow-lg".concat(' ', index % 2 == 0 ? 'bg-white' : 'bg-black')}>
                                 {/* <div className="bg-gradient-to-b from-[#FB5132] to-[#EA3F50]  block rounded-lg shadow-lg"> */}

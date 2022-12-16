@@ -13,6 +13,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../state/reducers'
 import Gallery from '../components/home/gallery'
 import Sponsors from '../components/home/sponsors'
+import Combo from '../components/home/combo'
 // import './index.css'
 const Home: NextPage = () => {
   const events = useSelector((state: RootState) => state.EventData)
@@ -29,6 +30,9 @@ const Home: NextPage = () => {
         </div>
         <div className='relative h-screen snap-center min-h-[calc(750px)]' id="events" >
           <NonTechnicalEvents />
+        </div>
+        <div className='relative h-screen snap-center min-h-[calc(750px)]'  >
+          <Combo />
         </div>
         <div className='relative h-screen snap-center min-h-[calc(750px)]'>
           <ClubPerformance />

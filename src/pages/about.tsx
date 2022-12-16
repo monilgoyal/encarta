@@ -35,9 +35,9 @@ function About() {
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/638b22078c1aac0011545658/638b220c8c1aac001154565a/images/vc-sir_bqn48f8a.jpeg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">AJAY KUMAR SHARMA</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">Prof. Dr. Sunil Sharma</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
-                                    <p className="text-base">VICE CHANCELLOR</p>
+                                    <p className="text-base">Hon'ble Vice Chancellor</p>
                                 </div>
                             </div>
                             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-justify">
@@ -62,7 +62,7 @@ function About() {
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
                                     <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">SUNIL SHARMA</h2>
-                                    <p className="text-base">DEAN</p>
+                                    <p className="text-base">Dean, Faculty of Engineering & Architecture</p>
                                 </div>
                             </div>
                             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-justify">
@@ -85,7 +85,7 @@ function About() {
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/27-1_rfl1dpqh.jpg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">N.C. BARWAR</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">Prof. Dr. N.C. Barwar</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
                                     <p className="text-base">HOD, DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</p>
                                 </div>
