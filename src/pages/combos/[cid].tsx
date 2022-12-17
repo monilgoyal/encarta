@@ -21,7 +21,7 @@ const ComboPost = () => {
             {!data && <div className='text-white absolute top-[40%] md:top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xl font-bold animate-pulse'>Loading...</div>}
             {
                 data && JSON.stringify({}) != JSON.stringify(data) &&
-                <div className="container px-5 py-12 md:py-24 mx-auto">
+                <div className="container px-5 py-12 md:py-24 mx-auto" key={data.id}>
                     <div className='text-white text-2xl md:text-3xl lg:text-4xl font-[Backsteal-Regular] mx-auto text-center mb-6 md:mb-12'>
                         <h1 className='text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170]' >{data.title}</h1>
                     </div>

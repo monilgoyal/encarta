@@ -37,7 +37,7 @@ function About() {
                                 <div className="flex flex-col items-center text-center justify-center">
                                     <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">Prof. Dr. Sunil Sharma</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
-                                    <p className="text-base">Hon'ble Vice Chancellor</p>
+                                    <p className="text-base">Hon&apos;ble Vice Chancellor</p>
                                 </div>
                             </div>
                             <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-justify">
