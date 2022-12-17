@@ -1,7 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image'
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io'
 
 const Sponsors = () => {
+    const [sponsorSlide, setSponsorSlide] = useState(0)
+    const moveRight = () => {
+        if (sponsorSlide == 2) {
+            return
+        }
+        setSponsorSlide(sponsorSlide + 1)
+    }
+    const moveLeft = () => {
+        if (sponsorSlide == 0) {
+            return
+        }
+        setSponsorSlide(sponsorSlide - 1)
+    }
 
     return (
         <section className="text-white body-font bg-transparent">
@@ -19,36 +33,89 @@ const Sponsors = () => {
                     </div>
 
                 </div>
-                <div className='flex flex-row '>
-                    <div className='w-1/2 items-center'>
-                        <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
-                            <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/Screenshot_2022-12-13_034815-removebg-preview_84pv0k1v.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
-                        </div>
-                        <div className="flex flex-col mb-6  pr-0 w-full  text-center">
-                            <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
-                            <h1 className="md:text-xl text-lg font-medium title-font text-white">Media Partner</h1>
-                        </div>
-
+                <div className='flex flex-row relative max-w-7xl mx-auto'>
+                    <div className=" cursor-pointer self-center absolute bg-gray-900 rounded-full z-10" onClick={moveLeft} style={{ backgroundImage: 'linear-gradient(to right bottom, #fb5131, #f94143, #f43253, #eb2762, #e02170)' }}>
+                        <IoIosArrowBack className='text-3xl mx-auto text-white' />
                     </div>
-                    {/* <div className='w-1/2 items-center'>
-                        <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
-                            <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/Screenshot_2022-12-15_193632-removebg-preview_c1z6d4uj.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
-                        </div>
-                        <div className="flex flex-col mb-6  pr-0 w-full  text-center">
-                            <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
-                            <h1 className="md:text-xl text-lg font-medium title-font text-white">Event Partner</h1>
-                        </div>
+                    {
+                        sponsorSlide == 0 && <>
 
-                    </div> */}
-                    <div className='w-1/2 items-center'>
-                        <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
-                            <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/BROTHERS_FOOD_LOGO_page-0001-removebg-preview-4_gk5wn714.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
-                        </div>
-                        <div className="flex flex-col mb-6  pr-0 w-full  text-center">
-                            <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
-                            <h1 className="md:text-xl text-lg font-medium title-font text-white">Food Partner</h1>
-                        </div>
+                            <div className='w-1/2 items-center '>
+                                <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
+                                    <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/Screenshot_2022-12-13_034815-removebg-preview_84pv0k1v.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col mb-6  pr-0 w-full  text-center">
+                                    <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
+                                    <h1 className="md:text-xl text-lg font-medium title-font text-white">Media Partner</h1>
+                                </div>
 
+                            </div>
+                            <div className='w-1/2 items-center'>
+                                <div className='w-32 md:w-36 h-32 md:h-36 mx-auto  pt-3'>
+                                    <Image className=' inline-block' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/myfm_3unbex94.png' width={300} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col mb-6  pr-0 w-full  text-center">
+                                    <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
+                                    <h1 className="md:text-xl text-lg font-medium title-font text-white">Radio Partner</h1>
+                                </div>
+
+                            </div>
+                            <div className='w-1/2 items-center hidden md:block'>
+                                <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
+                                    <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/samarth_8isrj44o.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col mb-6  pr-0 w-full  text-center">
+                                    <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
+                                    <h1 className="md:text-xl text-lg font-medium title-font text-white">Event Partner</h1>
+                                </div>
+                            </div>
+                        </>
+                    }{
+                        (sponsorSlide == 1 || sponsorSlide == 2) && <>
+                            <div className={'w-1/2 items-center'.concat(' ', sponsorSlide == 1 ? "block md:hidden" : "hidden")}>
+                                <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
+                                    <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/samarth_8isrj44o.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col mb-6  pr-0 w-full  text-center">
+                                    <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
+                                    <h1 className="md:text-xl text-lg font-medium title-font text-white">Event Partner</h1>
+                                </div>
+                            </div>
+                            <div className={'w-1/2 items-center '.concat(' ', sponsorSlide == 2 ? "hidden md:block" : "block")}>
+                                <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
+                                    <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/BROTHERS_FOOD_LOGO_page-0001-removebg-preview-4_gk5wn714.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col mb-6  pr-0 w-full  text-center">
+                                    <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
+                                    <h1 className="md:text-xl text-lg font-medium title-font text-white">Food Partner</h1>
+                                </div>
+
+                            </div>
+                            <div className={'w-1/2 items-center'.concat(' ', sponsorSlide == 1 ? "hidden md:block" : "block")}>
+                                <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
+                                    <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/Cafe-651_slbifjos.png' width={240} height={200} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col mb-6  pr-0 w-full  text-center">
+                                    <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
+                                    <h1 className="md:text-xl text-lg font-medium title-font text-white">Cafe Partner</h1>
+                                </div>
+                            </div>
+                            <div className={'w-1/2 items-center'.concat(' ', sponsorSlide == 1 ? "hidden md:block" : "block")}>
+                                <div className='w-32 md:w-36 h-32 md:h-36 mx-auto'>
+                                    <Image className=' inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/thichshake_ic4aotni.png' width={240} height={240} objectFit='contain' layout='responsive' alt='bolde - Title Sponsor' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col mb-6  pr-0 w-full  text-center">
+                                    <h2 className="text-xs text-white tracking-widest font-medium title-font mb-1">As Our</h2>
+                                    <h1 className="md:text-xl text-lg font-medium title-font text-white">Cafe Partner</h1>
+                                </div>
+                            </div>
+                        </>
+                    }
+
+
+
+                    <div className="cursor-pointer self-center absolute right-0 bg-gray-900 rounded-full z-10" onClick={moveRight} style={{ backgroundImage: 'linear-gradient(to right bottom, #fb5131, #f94143, #f43253, #eb2762, #e02170)' }} >
+                        <IoIosArrowForward className='text-3xl mx-auto text-white' />
                     </div>
 
                 </div>

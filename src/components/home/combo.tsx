@@ -24,13 +24,15 @@ const ClubPerformance = () => {
                 {JSON.stringify(EventInitialState) != JSON.stringify(events) && events.Events.COMBOS && Object.values(events.Events.COMBOS).map((e: any, index) => (
                     <div className="snap-center shrink-0  max-w-lg w-3/4 sm:w-2/5 lg:w-3/5  rounded-lg cursor-pointer " key={e.id}>
                         <Link href={`/combos/${e.id}`} passHref >
-                            <div className=" lg:mb-0 max-w-[320px]  text-center mx-auto w-full ">
-                                <div className="block rounded-lg shadow-lg backdrop-blur-sm bg-black/60">
-                                    <div className="relative overflow-hidden bg-no-repeat bg-cover">
-                                        <Image className=' w-full rounded-lg  ' src={e.thumbUrl} width={135} height={135} objectFit="contain" layout='responsive' alt={e.title}></Image>
+                            <a>
+                                <div className=" lg:mb-0 max-w-[320px]  text-center mx-auto w-full ">
+                                    <div className="block rounded-lg shadow-lg backdrop-blur-sm bg-black/60">
+                                        <div className="relative overflow-hidden bg-no-repeat bg-cover">
+                                            <Image className=' w-full rounded-lg  ' src={e.thumbUrl} width={135} height={135} objectFit="contain" layout='responsive' alt={e.title}></Image>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </a>
                         </Link>
                     </div>
                 ))}

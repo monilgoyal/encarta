@@ -35,7 +35,7 @@ function About() {
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/638b22078c1aac0011545658/638b220c8c1aac001154565a/images/vc-sir_bqn48f8a.jpeg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">Prof. Dr. Sunil Sharma</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-bold">Prof. Ajay Kumar Sharma</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
                                     <p className="text-base">Hon&apos;ble Vice Chancellor</p>
                                 </div>
@@ -61,7 +61,7 @@ function About() {
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/Screenshot-2022-12-15-223333_mr5vnqcc.png' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">SUNIL SHARMA</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-bold">Prof. Dr. Sunil Sharma</h2>
                                     <p className="text-base">Dean, Faculty of Engineering & Architecture</p>
                                 </div>
                             </div>
@@ -82,10 +82,36 @@ function About() {
                         <div className="flex flex-col sm:flex-row mt-10">
                             <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8 flex flex-col justify-center align-middle items-center self-center">
                                 <div className='w-28 h-28 rounded-full mx-auto border border-transparent dark:border-indigo-600 p-1'>
+                                    <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/Arvind_verma_gjl3s7fk.jpg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
+                                </div>
+                                <div className="flex flex-col items-center text-center justify-center">
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-bold">Prof. Arvind Kumar Verma</h2>
+                                    <p className="text-base">DEAN, STUDENT WELFARE</p>
+                                </div>
+                            </div>
+                            <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-justify">
+                                <p className="leading-relaxed text-lg mb-4">Respected Readers,
+                                    Since its founding, M.B.M University has been at the forefront of instruction and research, in number of engineering and architectural fields. The University has flourished to offer varied courses, relevant to the recent demands of business, industry and society. We persevere to make sure that our academic programme meet the standards of industry advancements in technology and also exhibit competence in National and International research.
+                                </p>
+                                <p className='leading-relaxed text-lg mb-4'>I am delighted to announce the commencement of the annual fest, titled “ENCARTA” from 23rd December 2022 lasting for consecutive three days, being organised by one of our esteemed departments, The Department of Computer Science And Engineering at the North Campus Venue. I would like to appreciate the efficient working of Management Team consisting of students, co-ordinators and faculty co-ordinators, who are working efficiently and effortlessly to make this 23rd edition’s celebration a record-breaking achievement. “ENCARTA” is keen on providing a platform to the proficient students to showcase their domain-specific prowess from both technical and cultural backgrounds.
+                                </p>
+                                <p className='leading-relaxed text-lg mb-4'>I would like to wrap up my address with the words of Ralph W.Sockman – “The larger the island of knowledge, the longer the shoreline of wonder.” So, keep learning, keep exploring and keep growing!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="text-white body-font">
+                <div className="container px-5 py-6 mx-auto flex flex-col">
+                    <div className="lg:w-4/6 mx-auto">
+                        <div className="flex flex-col sm:flex-row mt-10">
+                            <div className="sm:w-1/3 text-center sm:pr-8 sm:py-8 flex flex-col justify-center align-middle items-center self-center">
+                                <div className='w-28 h-28 rounded-full mx-auto border border-transparent dark:border-indigo-600 p-1'>
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/27-1_rfl1dpqh.jpg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">Prof. Dr. N.C. Barwar</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-bold">Prof. Dr. N.C. Barwar</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
                                     <p className="text-base">HOD, DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING</p>
                                 </div>
@@ -126,7 +152,7 @@ function About() {
                                     <Image className='rounded-full inline-block ' src='https://cdn.dorik.com/6170fc2c54b34900117ea7a5/632a2aa24a33d3001191b969/images/299879726_1227725241360586_7954635754734882989_n_ylecrpzh.jpg' width={240} height={240} objectFit='cover' layout='responsive' alt='monil goyal' priority={true}></Image>
                                 </div>
                                 <div className="flex flex-col items-center text-center justify-center">
-                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-semibold">ABHISEK GOUR</h2>
+                                    <h2 className="mt-4 title-font  text-white text-transparent bg-clip-text bg-gradient-to-b from-[#FB5131] to-[#E02170]  mb-1 cursor-pointer font-[Andika-Regular] text-xl font-bold">ABHISEK GOUR</h2>
                                     {/* <div className="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div> */}
                                     <p className="text-base">ENCARTA FACULTY CO-ORDINATOR</p>
                                 </div>
