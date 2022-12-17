@@ -47,10 +47,10 @@ const ComboPost = () => {
                                             </thead>
                                             <tbody className='text-xs md:text-sm'>
                                                 {
-                                                    data.Events.map(d => (
+                                                    data.Events.map((d, index) => (
 
 
-                                                        <tr>
+                                                        <tr key={index}>
                                                             <th className="border-t-0 px-3 align-middle border-l-0 border-r-0 whitespace-nowrap p-4 text-left">
                                                                 {d[0]}
                                                             </th>
