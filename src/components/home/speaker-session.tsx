@@ -13,6 +13,7 @@ const Speakers = () => {
                 <div className='text-white  text-3xl md:text-4xl lg:text-5xl font-semibold mx-auto text-center'>
                     <h1 className='tracking-[.1em] mr-[-0.1em]  font-[Backsteal-Regular] text-transparent bg-clip-text bg-gradient-to-r from-[#FB5131] via-[#E93E53] to-[#E02170] sm:py-4'>Spearkers</h1>
                 </div>
+                {JSON.stringify(EventInitialState) == JSON.stringify(events) && <div className='text-white absolute top-[40%] md:top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xl font-bold animate-pulse'>Loading...</div>}
                 <div className=' flex flex-col md:flex-row justify-around mt-4 gap-8 align-middle'>
                     {JSON.stringify(EventInitialState) != JSON.stringify(events) && Object.values(events.Events.SPEAKERS).map((e: any) => (
 
