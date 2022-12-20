@@ -31,18 +31,18 @@ const Home: NextPage = () => {
         <div className='relative h-screen snap-center min-h-[calc(750px)]' id="events" >
           <NonTechnicalEvents />
         </div>
-        <div className='relative h-screen snap-center min-h-[calc(750px)]'  >
-          <Combo />
-        </div>
-        <div className='relative h-screen snap-center min-h-[calc(750px)]'>
-          <ClubPerformance />
-        </div>
         {
           events.Events.WORKSHOP &&
           <div className='relative h-screen snap-center min-h-[calc(750px)]'>
             <Workshops />
           </div>
         }
+        <div className='relative h-screen snap-center min-h-[calc(750px)]'  >
+          <Combo />
+        </div>
+        <div className='relative h-screen snap-center min-h-[calc(750px)]'>
+          <ClubPerformance />
+        </div>
         {
           events.Events.SPEAKERS &&
           <div className='relative h-screen snap-center min-h-[calc(750px)]'>

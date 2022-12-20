@@ -71,11 +71,11 @@ function Planner({ day }) {
                             <div className="h-full w-6 absolute lg:left-[calc(50%-12px)] inset-0 flex items-center justify-center ">
                                 <div className="h-full w-[2px]  bg-gradient-to-b from-[#FB5131] via-[#E93E53] to-[#E02170] pointer-events-none"></div>
                             </div>
-                            <div className="flex-shrink-0 w-3 h-3 rounded-full mt-10  inline-flex items-center justify-center bg-white text-white relative z-10 title-font font-medium text-sm ml-[6px] lg:ml-0"></div>
+                            <div className="flex-shrink-0 w-3 h-3 rounded-full  mt-8 md:mt-3   inline-flex items-center justify-center bg-white text-white relative z-10 title-font font-medium text-sm ml-[6px] lg:ml-0"></div>
                             <div className="animation_RL w-full lg:w-full text-left flex flex-col justify-center translate-x-full ">
                                 <div className="flex-grow md:px-8 px-6 flex sm:items-center items-start flex-col sm:flex-row">
                                     <div className="flex-grow sm:px-6 mt-6 sm:mt-0 text-white">
-                                        <h2 className="font-medium title-font   mb-1 text-xl">{e.title}</h2>
+                                        <h2 className="font-medium title-font   mb-1 md:text-xl text-base">{e.title}</h2>
                                         <p className="leading-relaxed">{e.date} {e.time}</p>
                                     </div>
                                 </div>
@@ -86,11 +86,11 @@ function Planner({ day }) {
                             <div className="h-full w-6 absolute lg:left-[calc(50%-12px)] inset-0 flex items-center justify-center ">
                                 <div className="h-full w-[2px] bg-gradient-to-b from-[#E02170] via-[#E93E53] to-[#FB5131]  pointer-events-none"></div>
                             </div>
-                            <div className="flex-shrink-0 w-3 h-3 rounded-full mt-10  inline-flex items-center justify-center bg-white text-white relative z-10 title-font font-medium text-sm ml-[6px] lg:ml-0"></div>
+                            <div className="flex-shrink-0 w-3 h-3 rounded-full mt-8 md:mt-3  inline-flex items-center justify-center bg-white text-white relative z-10 title-font font-medium text-sm ml-[6px] lg:ml-0"></div>
                             <div className={"w-full lg:w-full text-left lg:text-right flex flex-col justify-center  ".concat(" ", width >= 1024 ? "animation_LR -translate-x-full" : "animation_RL translate-x-full")}>
                                 <div className="flex-grow md:px-8 px-6 flex sm:items-center items-start flex-col sm:flex-row lg:flex-row-reverse">
                                     <div className="flex-grow sm:px-6 mt-6 sm:mt-0 text-white">
-                                        <h2 className="font-medium title-font  mb-1 text-xl">{e.title}</h2>
+                                        <h2 className="font-medium title-font  mb-1 md:text-xl text-base">{e.title}</h2>
                                         <p className="leading-relaxed">{e.date} {e.time}</p>
                                     </div>
                                 </div>
