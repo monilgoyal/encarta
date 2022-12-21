@@ -23,7 +23,7 @@ function Schedule() {
             <Navbar />
             <section className=" py-20 lg:py-24  min-h-[50vh] md:min-h-[70vh]">
                 {
-                    !schedule && <div className='text-white absolute top-[40%] md:top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xl font-bold'>WILL BE RELEASED SOON <br />!! STAY TUNED !!</div>
+                    !schedule && <div className='text-white absolute top-[40%] md:top-[45%] left-1/2 -translate-x-1/2 -translate-y-1/2 text-center text-xl font-bold'>Loading...</div>
                 }
                 {
                     schedule && <>

@@ -76,7 +76,8 @@ function Planner({ day }) {
                                 <div className="flex-grow md:px-8 px-6 flex sm:items-center items-start flex-col sm:flex-row">
                                     <div className="flex-grow sm:px-6 mt-6 sm:mt-0 text-white">
                                         <h2 className="font-medium title-font   mb-1 md:text-xl text-base">{e.title}</h2>
-                                        <p className="leading-relaxed">{e.date} {e.time}</p>
+                                        <p className="leading-relaxed">{e.date}</p>
+                                        <p className="leading-relaxed">{e.time}</p>
                                     </div>
                                 </div>
                             </div>
@@ -91,7 +92,8 @@ function Planner({ day }) {
                                 <div className="flex-grow md:px-8 px-6 flex sm:items-center items-start flex-col sm:flex-row lg:flex-row-reverse">
                                     <div className="flex-grow sm:px-6 mt-6 sm:mt-0 text-white">
                                         <h2 className="font-medium title-font  mb-1 md:text-xl text-base">{e.title}</h2>
-                                        <p className="leading-relaxed">{e.date} {e.time}</p>
+                                        <p className="leading-relaxed">{e.date}</p>
+                                        <p className="leading-relaxed">{e.time}</p>
                                     </div>
                                 </div>
                             </div>

@@ -7,8 +7,6 @@ import TechnicalEvents from '../components/home/tech-event'
 import NonTechnicalEvents from '../components/home/non-tech-event'
 import ClubPerformance from '../components/home/clubs-performance'
 import Workshops from '../components/home/workshops'
-import SpeakerSession from '../components/home/speaker-session'
-import Entrepreneurshipeurship from '../components/home/entrepreneurship'
 import { useSelector } from 'react-redux'
 import { RootState } from '../state/reducers'
 import Gallery from '../components/home/gallery'
@@ -43,18 +41,6 @@ const Home: NextPage = () => {
         <div className='relative h-screen snap-center min-h-[calc(750px)]'>
           <ClubPerformance />
         </div>
-        {
-          events.Events.SPEAKERS &&
-          <div className='relative h-screen snap-center min-h-[calc(750px)]'>
-            <SpeakerSession />
-          </div>
-        }
-        {
-          events.Events.ENTREPRENEURSHIP &&
-          <div className='relative h-screen snap-center min-h-[calc(750px)]'>
-            <Entrepreneurshipeurship />
-          </div>
-        }
         {
 
           <div className='relative h-screen snap-center min-h-[calc(750px)]'>
